@@ -1,0 +1,128 @@
+var data=[
+	{
+		url:"th_sparklina.jpg",
+		classes:[0,1],
+		title:"SPARKLINA",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_home.jpg",
+		classes:[0,1],
+		title:"SPARKLINA",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_except.jpg",
+		classes:[0,2,4],
+		title:"EXCEPT YOU",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_musculus.jpg",
+		classes:[0,1,4],
+		title:"MUSCULUS",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_weightless.jpg",
+		classes:[0,1],
+		title:"WEIGHTLESS",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_clock.jpg",
+		classes:[0,2,4],
+		title:"CLOCK APP",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_yoursmile.jpg",
+		classes:[0,1,3],
+		title:"YOUR SMILE",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_designers3.jpg",
+		classes:[0,1],
+		title:"DESIGNERS3",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_antiux.jpg",
+		classes:[0,1],
+		title:"COMING SOON",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_vampiri.jpg",
+		classes:[0,1],
+		title:"THE VAMPIRES",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_rekordr.jpg",
+		classes:[0,1,3],
+		title:"REKORDR",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_djokovic.jpg",
+		classes:[0,1],
+		title:"NOVAK DJOKOVIC FOUNDATION",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_trendy.jpg",
+		classes:[0,1],
+		title:"COMING SOON",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_buddha.jpg",
+		classes:[0,3],
+		title:"FATTY BUDDHA",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_freeforall.jpg",
+		classes:[0,3],
+		title:"FREE FOR ALL",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_paleo.jpg",
+		classes:[0,3],
+		title:"PALEO DREAM",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_perfectfuel.jpg",
+		classes:[0,3],
+		title:"PERFECT FUEL",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_social.jpg",
+		classes:[0,2],
+		title:"SOCIAL APP",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_beauty.jpg",
+		classes:[0,2],
+		title:"BEAUTY APP",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_sweetsorrow.jpg",
+		classes:[0,3,4],
+		title:"PERFECT FUEL",
+		info:"SEE FULL PROJECT",
+	},
+	{
+		url:"th_comic.jpg",
+		classes:[0,4],
+		title:"I REMEMBER THE SOUP",
+		info:"SEE FULL PROJECT",
+	}
+]

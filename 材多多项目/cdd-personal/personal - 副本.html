@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>材多多</title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/person-common.css" />
+		<link rel="stylesheet" href="css/my-order.css"/>
+	</head>
+	<body>
+		<!--遮罩层共有3个弹出框，给mask加p-delete是点击删除的显示，加p-Goods是点击确认收货的弹出框显示，加p-cancel是点击取消订单的时候弹出  什么都不加就什么都不显示-->
+		<div class="mask">
+			<div class="mask-con"></div>
+			<div class="p-alert cancel-order">
+				<div class="alert-header clearfix">
+					<p class="header-lef">提交</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-section">
+					<h3 class="section-header">确定取消订单，请选择取消原因：</h3>
+					<!--加click-->
+					<div class="select">
+						<span class="title">请选择取消原因<i></i></span>
+						<ul>
+							<li class="option">买家取消订单</li>
+							<li class="option">卖家库存不足</li>
+							<li class="option">其它</li>
+						</ul>
+					</div>
+					<div class="btn">
+						<a href="#">确定</a>
+						<a href="#">不取消</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-alert Goods-sure">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">请确认已经收到商品</p>
+					<div class="btn clearfix">
+						<a class="sure">确定</a>
+						<a class="sure">没收到</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-alert delete-sure">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">确定要删除该订单？</p>
+					<div class="btn clearfix">
+						<a class="sure">确定</a>
+						<a class="sure">不删除</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+				<div class="header-content">
+					<div class="header-left">
+						<a href="#" class="cdd-home">材多多首页</a>
+						<span><i class="gps-icon"></i>[<a href="#" class="gps-title">北京市</a>]</span>
+					</div>
+					<div class="header-right">
+						<ul class="header-right-con">
+							<li class="header-login">
+								<p class="header-logining"><a href="#">superman</a><span>退出</span></p>
+								<i class="bor-right"></i>
+							</li>
+							<li class="my-duoduo clearfix" id="my-duoduo">
+								<div class="header">
+									<a href="#">我的材多多</a><i class="my-icon"></i>
+								</div>
+								<div class="content">
+									<p><a href="#">我的订单（<span>9</span>）</a></p>
+									<p><a href="#">商品管理</a></p>
+									<p class="last"><a href="#">客户咨询（<span>9</span>）</a></p>
+								</div>
+								<i class="bor-right"></i>
+							</li>
+							<li><a href="#">帮助中心</a><i class="bor-right"></i></li>
+							<li class="customerService clearfix">客服热线:<span>400-800-8888</span></li>
+							<li class="weixin" id="weixin">
+								<i class="weixin-icon"></i>
+								<div class="weixinhover">
+									<i class="arrow"></i>
+									<i class="erweima"></i>
+									<p>扫一扫关注官方微信</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="con-right"></div>
+				</div>
+		</div>
+		<div class="p-header">
+			<div class="warp clearfix">
+				<a class="p-logo" href="#"></a>
+				<div class="nav-banner">
+					<a href="#" class="current">首页</a>
+				</div>
+				<div class="personal-set">
+					<span class="title">个人设置<i></i></span>
+					<div class="con">
+						<a href="#">个人资料</a>
+						<i></i>
+						<a href="#">账号设置</a>
+					</div>
+				</div>
+				<a class="p-my-shopping" href="#"><i></i>我的采购单&gt;&gt;</a>
+				<div class="seachbox">
+					<form target="_blank" method="get" class="clearfix">
+						<div class="seach">
+							<input class="seach-text" type="text" autocomplete="off" maxlength="50" placeholder="请输入要搜索的内容"/>
+						</div>
+						<input type="submit" class="do-seach"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="warp main-body clearfix">
+			<i class="sider-border-bottom"></i>
+			<div class="p-side">
+				<h3 class=""><a href="#">个人中心</a></h3>
+				<ul class="p-nav clearfix">
+					<!--当前页加s-new-->
+					<li class="s-new"><a href="#"><i></i>我的订单</a></li>
+					<li><a href="#"><i></i>收货地址</a></li>
+					<li><a href="#"><i></i>账户信息</a></li>
+					<li><a href="#"><i></i>账户安全</a></li>
+				</ul>
+			</div>
+			<div class="p-main">
+				<div class="seach-nav clearfix">
+					<div class="nav">
+						<!--当前的页面也变成蓝色能用p-new类代替-->
+						<a href="#" class="list p-new">全部</a>
+						<a href="#" class="list">待付款<i>10</i></a>
+						<a href="#" class="list">待发货</a>
+						<a href="#" class="list">待收货<i>5</i></a>
+					</div>
+					<div class="p-seach">
+						<div class="choose-state sclect">
+							<!--给v class="choose-state sclect加click点击打开-->
+							<span class="title">选择订单状态<i></i></span>
+							<ul>
+								<li>已付款<i></i></li>        
+								<li>交易关闭<i></i></li>
+								<li>交易完成<i></i></li>
+								<li>已发货<i></i></li>
+								<li>待付款</li>
+							</ul>
+						</div>
+						<div class="choose-orderNo sclect">
+							<input type="text" placeholder="商品名称或订单号"/>
+						</div>
+						<input type="submit" class="submit" value="搜索"/>
+					</div>
+				</div>
+				<div class="order-con">
+					<div class="order-header clearfix">
+						<div class="cell1 con">
+							<!--给con-sclect加hover类下拉菜单就出来了-->
+							<div class="con-select">
+								<span class="title">全部订单<i></i></span>
+								<ul>
+									<li class="option"><a href="#">今年内订单</a></li>
+									<i class="border"></i>
+									<li class="option"><a href="#">近三个月订单</a></li>
+								</ul>
+							</div>
+							订单详情
+						</div>
+						<p class="cell2">收货人</p>
+						<p class="cell3">总计</p>
+						<p class="cell4">状态</p>
+						<p class="cell5">操作</p>
+					</div>
+					<div class="order-list">
+						<table class="merge-list">
+							<tr class="merge-header">
+								<td colspan="5">
+									<p class="td-1 clearfix">
+										<span>订单号：<em class="num">123123123132</em></span>
+										<span>2015-12-12<em class="time">18:29:43</em></span>
+										<span class="tip">您订单中的商品在不同库房或属不同商家，故拆分为以下订单分开配送，给您带来不便敬请谅解。</span>
+									</p>
+									<i class="border"></i>
+									<p class="td-2 clearfix">        
+										<span>收货人：<em>刘德华123</em></span>
+										<span>订单金额：<em class="money">¥9999.99</em></span>
+										<span>订单状态：<em>已拆分</em></span>
+									</p>
+								</td>
+							</tr>
+							<tr class="t-header">
+								<td colspan="5">
+									<span>订单号：<em class="num">123123123132</em></span>
+									<span>2015-12-12<em class="time">18:29:43</em></span>
+									<span class="company">无锡江南电缆有限公司</span>
+									<span class="tip">联系客服</span>
+								</td>
+							</tr>
+							<tr class="t-content">
+								<td class="cell1">
+									<a href="#" class="imgs">
+										<img src="images/my-order/order-img.png" alt="五彩BV2.5 | 五彩BVR1.5"/>
+									</a>
+									<div class="order-name">
+										<a href="#" title="五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5">
+											<span>五彩BV2.5</span>|<span>五彩BVR1.5</span>|<span>五彩HJLV</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>
+										</a>
+										<p class="num">总共<span>3</span>件商品</p>
+									</div>
+								</td>
+								<td class="cell2">
+									刘德华123
+								</td>
+								<td class="cell3">
+									¥2000.00
+								</td>
+								<!--cell4的状态有3种~一种是no就是已付款和待付款字体是红色的~一种是yes是交易完成和已发货字体是绿色的~还有一种是交易关闭是off类-->
+								<td class="cell4">
+									<a href="#" class="no">待付款</a>
+									<a href="#" class="detail">订单详情</a>
+								</td>
+								<td class="cell5">
+									<a href="#" class="pay">立即付款</a>
+									<a href="#" class="delete">取消订单</a>
+								</td>
+							</tr>
+							<tr class="t-header">
+								<td colspan="5">
+									<span>订单号：<em class="num">123123123132</em></span>
+									<span>2015-12-12<em class="time">18:29:43</em></span>
+									<span class="company">无锡江南电缆有限公司</span>
+									<span class="tip">联系客服</span>
+								</td>
+							</tr>
+							<tr class="t-content">
+								<td class="cell1">
+									<a href="#" class="imgs">
+										<img src="images/my-order/order-img.png" alt="五彩BV2.5 | 五彩BVR1.5"/>
+									</a>
+									<div class="order-name">
+										<a href="#" title="五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5">
+											<span>五彩BV2.5</span>|<span>五彩BVR1.5</span>|<span>五彩HJLV</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>
+										</a>
+										<p class="num">总共<span>3</span>件商品</p>
+									</div>
+								</td>
+								<td class="cell2">
+									刘德华123
+								</td>
+								<td class="cell3">
+									¥2000.00
+								</td>
+								<!--cell4的状态有3种~一种是no就是已付款和待付款字体是红色的~一种是yes是交易完成和已发货字体是绿色的~还有一种是交易关闭是off类-->
+								<td class="cell4">
+									<a href="#" class="no">待付款</a>
+									<a href="#" class="detail">订单详情</a>
+								</td>
+								<td class="cell5">
+									<a href="#" class="pay">立即付款</a>
+									<a href="#" class="delete">取消订单</a>
+								</td>
+							</tr>
+						</table>
+						<table>
+							<tr class="t-header">
+								<td colspan="5">
+									<span>订单号：<em class="num">123123123132</em></span>
+									<span>2015-12-12<em class="time">18:29:43</em></span>
+									<span class="company">无锡江南电缆有限公司</span>
+									<span class="tip">联系客服</span>
+								</td>
+							</tr>
+							<tr class="t-content">
+								<td class="cell1">
+									<a href="#" class="imgs">
+										<img src="images/my-order/order-img.png" alt="五彩BV2.5 | 五彩BVR1.5"/>
+									</a>
+									<div class="order-name">
+										<a href="#" title="五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5">
+											<span>五彩BV2.5</span>|<span>五彩BVR1.5</span>|<span>五彩HJLV</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>
+										</a>
+										<p class="num">总共<span>3</span>件商品</p>
+									</div>
+								</td>
+								<td class="cell2">
+									刘德华123
+								</td>
+								<td class="cell3">
+									¥2000.00
+								</td>
+								<!--cell4的状态有3种~一种是no就是已付款和待付款字体是红色的~一种是yes是交易完成和已发货字体是绿色的~还有一种是交易关闭是off类-->
+								<td class="cell4">
+									<a href="#" class="no">待付款</a>
+									<a href="#" class="detail">订单详情</a>
+								</td>
+								<td class="cell5">
+									<a href="#" class="pay">立即付款</a>
+									<a href="#" class="delete">取消订单</a>
+								</td>
+							</tr>
+						</table>
+						<table>
+							<tr class="t-header">
+								<td colspan="5">
+									<span>订单号：<em class="num">123123123132</em></span>
+									<span>2015-12-12<em class="time">18:29:43</em></span>
+									<span class="company">无锡江南电缆有限公司</span>
+									<span class="tip">联系客服</span>
+								</td>
+							</tr>
+							<tr class="t-content">
+								<td class="cell1">
+									<a href="#" class="imgs">
+										<img src="images/my-order/order-img.png" alt="五彩BV2.5 | 五彩BVR1.5"/>
+									</a>
+									<div class="order-name">
+										<a href="#" title="五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5">
+											<span>五彩BV2.5</span>|<span>五彩BVR1.5</span>|<span>五彩HJLV</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>
+										</a>
+										<p class="num">总共<span>3</span>件商品</p>
+									</div>
+								</td>
+								<td class="cell2">
+									刘德华123
+								</td>
+								<td class="cell3">
+									¥2000.00
+								</td>
+								<!--cell4的状态有3种~一种是no就是已付款和待付款字体是红色的~一种是yes是交易完成和已发货字体是绿色的~还有一种是交易关闭是off类-->
+								<td class="cell4">
+									<a href="#" class="no">待付款</a>
+									<a href="#" class="detail">订单详情</a>
+								</td>
+								<td class="cell5">
+									<a href="#" class="pay">立即付款</a>
+									<a href="#" class="delete">取消订单</a>
+								</td>
+							</tr>
+						</table>
+						<table>
+							<tr class="t-header">
+								<td colspan="5">
+									<span>订单号：<em class="num">123123123132</em></span>
+									<span>2015-12-12<em class="time">18:29:43</em></span>
+									<span class="company">无锡江南电缆有限公司</span>
+									<span class="tip">联系客服</span>
+								</td>
+							</tr>
+							<tr class="t-content">
+								<td class="cell1">
+									<a href="#" class="imgs">
+										<img src="images/my-order/order-img.png" alt="五彩BV2.5 | 五彩BVR1.5"/>
+									</a>
+									<div class="order-name">
+										<a href="#" title="五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5|五彩BV2.5">
+											<span>五彩BV2.5</span>|<span>五彩BVR1.5</span>|<span>五彩HJLV</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>|<span>五彩BV2.5</span>
+										</a>
+										<p class="num">总共<span>3</span>件商品</p>
+									</div>
+								</td>
+								<td class="cell2">
+									刘德华123
+								</td>
+								<td class="cell3">
+									¥2000.00
+								</td>
+								<!--cell4的状态有3种~一种是no就是已付款和待付款字体是红色的~一种是yes是交易完成和已发货字体是绿色的~还有一种是交易关闭是off类-->
+								<td class="cell4">
+									<a href="#" class="no">待付款</a>
+									<a href="#" class="detail">订单详情</a>
+								</td>
+								<td class="cell5">
+									<a href="#" class="pay">立即付款</a>
+									<a href="#" class="delete">取消订单</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="pages">
+					<span class="p-number">
+				    	<a class="p-prev" href="#">
+							<i><</i>
+						<em>上一页</em>
+						</a>
+						<a href="#">1</a>
+						<b class="p-break">…</b>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#" class="p-new">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<b class="p-break">…</b>
+						<a href="#">28</a>
+						<a class="p-next" href="#">
+							<em>下一页</em>
+							<i>></i>
+						</a>
+					</span>
+					<span class="p-skip">
+						<em>共 <b>28</b> 页　到　</em>
+						<input value="5" class="input-txt"/>
+						<em>　页　</em>
+						<a class="btn" href="#">确定</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-foot">
+				<ul class="clearfix">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">隐私条款</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li class="foot-list-last"><a href="#">意见反馈</a></li>
+				</ul>
+				<p class="footer-copyright">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005 © 2003-2014 TMALL.COM 版权所有</p>
+			</div>
+		</div>
+		<script src="js/jquery-1.2.6.pack.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+		//之前那么写有兼容问题弹出和结束$(".mask").addClass("p-cancel").show();以后这么写
+			$(".delete").bind("click",function(){
+				$(".mask").addClass("p-cancel").show();
+			});
+			$(".header-rig").bind("click",function(){
+				$(".mask").removeClass("p-cancel").hide();
+			})
+		</script>
+	</body>
+</html>

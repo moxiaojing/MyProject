@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<header id="head">
+				<div class="title clearfix">
+					<h1 class="logo">
+						<a href="#">
+							<h1>妙味云盘</h1>
+						</a>
+					</h1>
+					<div class="head_right">
+						<a href="#">
+							<img src="img/user.png"/>
+							<span></span>
+						</a>
+						<div class="set">
+							<div>设置</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<section id="cont_box">
+				<nav class="cont_nav clearfix">
+					<ul class="nav_left">
+						<li>
+							<i></i>
+							<span>下载</span>
+						</li>
+						<li>
+							<i></i>
+							<span>分享</span>
+						</li>
+						<li>
+							<i></i>
+							<span>移动到</span>
+						</li>
+						<li>
+							<i></i>
+							<span>重命名</span>
+						</li>
+						<li>
+							<i></i>
+							<span>删除</span>
+						</li>
+						<li>
+							<i></i>
+							<span>新建文件夹</span>
+						</li>
+						<li>
+							<i></i>
+						</li>
+					</ul>
+					<div class="nav_right">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<i></i>
+							<i></i>
+							<ul class="">
+								<li>
+									<a></a>
+									<span>按时间排序</span>
+								</li>
+								<li>
+									<a></a>
+									<span>按字母排序</span>
+								</li>
+								<li>
+									<a></a>
+									<span>显示缩略图</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="cont_main clearfix">
+					<div class="cont_left">
+						<div id="list" class="treeList">
+							<!--<ul>
+								<li class="open ml10">
+									<h3>
+										<em class="sanjiao"></em>
+										<span>微云</span>
+									</h3>
+								</li>
+								<li class="ml20">
+									<ul class="list_ul1">
+										<li class="open"> 
+											<h3>
+												<em class="sanjiao"></em> 
+												<span>js课程</span>
+											</h3>
+										</li>
+										<li class="ml30">
+											<ul class="list_ul1_ul1">
+												<li>
+													<h3>
+														<em class="sanjiao"></em>
+														<span>123</span>
+													</h3>
+												</li>
+												<li>
+													<ul>
+														<li> 
+															<em class="sanjiao"></em>
+															<h3>
+																<span>111</span>
+															</h3>
+														</li>
+														
+													</ul>
+												</li>
+												<li class=""> 
+													<em class="sanjiao"></em>
+													<h3>
+														<span>456</span>
+													</h3>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>-->
+						</div>
+					</div>
+					<div class="cont_right">
+						<div class="cont_top">
+							<div class="all"></div>
+							<nav id="nav"></nav>
+						</div>
+						<div class="files_box">
+							<!--<ul id="thumbnailList">
+								<li></li>
+							</ul>-->
+							<ul id="files">
+								<!--<li>
+										<div class="checkbox"></div>
+										<a>
+											<span class="name">js基础课程</span>
+											<input value="js基础课程" />
+										</a>
+									</li>
+									<li>
+										<div class="checkbox"></div>
+										<img class="img_file" src="img/img_file.png"/>
+										<span class="name">js基础课程</span>
+									</li>-->
+							</ul>
+							<div id="zhezhao">
+								<div></div>
+								<strong>暂无文件</strong>
+								<p>请点击左上角的"上传"按钮添加</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div id="funPopBox">
+			<div class="delPopBox ">
+				<i class="close_ico"></i>
+				<div class="tipsBox">
+					<div class="wenhao_ico"></div>
+					<div class="tipsText">
+						<h3>确认要删除这个文件夹吗？</h3>
+						<p>已删除的文件可以在回收站找到</p>
+					</div>
+				</div>
+				<div class="btnBox">
+					<span id="sure_btn" class="active_btn">确认</span>
+					<span id="cancel_btn">取消</span>
+				</div>
+			</div>
+			<div class="delingPopBox ">
+				<div>ing</div>
+				<span class="deling">正在删除</span>
+				<strong>0/15</strong>
+			</div>
+			<div class="saveAsPopBox3 show_funPopBox">
+				另存为弹框
+			</div>
+		</div>
+		<div id="popBox">
+			请给文件夹命名字...
+		</div>
+		<!--
+			拖拽文件夹时，随鼠标生成一个文件夹的剪影，并提示要移动文件夹的数量
+		-->
+		<!--<div class="dragFile">
+			<div class="drag_fileImg"></div>
+	        <span class="drag_fileNum"></span>
+		</div>
+		-->
+		
+		
+		<script type="text/javascript" src="js/dialog.js"></script>
+		<script type="text/javascript" src="js/date.js"></script>
+		<script type="text/javascript" src="js/handleDate.js"></script>
+		<script type="text/javascript" src="js/xrHTML.js"></script>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript" src="js/interactive.js"></script>
+		
+		<!--<script type="text/javascript" src="js/index.js"></script>-->
+	</body>
+</html>

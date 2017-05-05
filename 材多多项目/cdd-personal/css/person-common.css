@@ -1,0 +1,351 @@
+.warp{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer-foot{
+	background: #f3f3f3;
+	border-top: 1px solid #e7e7e7;
+	box-shadow: 0 0 1px #E7E7E7;
+}
+.footer-foot ul li a{
+	color: #908f8f;
+}
+.footer-foot ul li{
+	border-right: 1px solid #908f8f;
+}
+/*头部开始*/
+.p-header{
+	height: 37px;
+	background: #0875f1;
+	padding: 28px;
+	border-bottom: 1px solid #708dad;
+	box-shadow: 0 0 3px #708dad;
+	margin: 0 0 10px 0;
+}
+/*logo*/
+.p-header .p-logo{
+	display: block;
+	width: 188px;
+	height: 52px;
+	background: url(../images/personal/logo.png) no-repeat;
+	margin-top: -9px;
+	float: left;
+}
+.p-header .text{
+	font: 18px/37px "microsoft yahei";
+	color: #fff;
+	float: left;
+}
+.p-header .text i{
+	display: inline-block;
+	width: 2px;
+	height: 18px;
+	background: #fff;
+	vertical-align: middle;
+	margin: 0 18px 0 0;
+}
+/*logo*/
+/*banner-nav*/
+.p-header .nav-banner{
+	float: left;
+	height: 37px;
+	margin-left: 25px;
+}
+.p-header .nav-banner .current{
+	padding: 0 25px;
+	margin-right: 0 5px 0 0;
+	font: 16px/37px "微软雅黑";
+	color: #fff;
+}
+.p-header .nav-banner .current:hover{
+	text-decoration: underline;
+}
+/*banner-nav*/
+/*设置开始*/
+.personal-set .title{
+	width: 64px;
+	height: 30px;
+	display: block;
+	position: relative;
+	zoom: 1;
+	font: 16px/30px "微软雅黑";
+	color: #fff;
+	padding: 0px 34px 0px 8px;
+}
+.personal-set{
+	width: 106px;
+	height: 30px;
+	margin: 3px 12px 0;
+	padding: 1px;
+	float: left;
+}
+.personal-set .title i{
+	display: block;
+	width: 15px;
+	height: 7px;
+	background: url(../images/personal/p-logo-header-drop.png) no-repeat;
+	position: absolute;
+	top: 13px;
+	right: 13px;
+}
+.p-header .personal-set:hover{
+	background: #fff;
+	padding: 0px;
+	border: 1px solid #e3e3e3;
+	color: #000;
+	position: relative;
+}
+.p-header .personal-set:hover .title{
+	color: #474747;
+}
+.p-header .personal-set:hover .title i{
+	background: url(../images/personal/p-logo-header-drop-hover.png) no-repeat;
+}
+.personal-set .con{
+	display: none;
+}
+.p-header .personal-set:hover .con{
+	display: block;
+	width: 106px;
+	height: 61px;
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	position: absolute;
+	left: -1px;
+	top: 30px;
+	border-top: none;
+}
+.p-header .personal-set:hover .con a{
+	display: block;
+	width: 98px;
+	height: 30px;
+	font: 12px/30px "宋体";
+	padding-left: 8px;
+	color: #474747;
+}
+.p-header .personal-set:hover .con i{
+	display: block;
+	width: 88px;
+	height: 1px;
+	background: #f7f7f7;
+	margin-left: 8px;
+}
+.p-header .personal-set .con a:hover{
+	background: #f1f1f1 ;
+}
+.p-header .p-my-shopping{
+	display: block;
+	width: 116px;
+	height: 35px;
+	padding-left: 62px;
+	background: #f6f6f6;
+	float: right;
+	font: 16px/35px Regular,"微软雅黑";
+	color: #717171;
+	border: 1px solid #fff;
+	box-shadow: 0 0 6px #fff;
+	position: relative;
+	margin: 0 0 0 10px;
+}
+.p-header .p-my-shopping i{
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url(../images/personal/p-logo-header-my-shopping.png) no-repeat;
+	position: absolute;
+	left: 22px;
+	top: 7px;
+}
+/*seach*/
+.seachbox{
+	width: 255px;
+	height: 32px;
+	border: 2px solid #1164c2;
+	background: #fff;
+	float: right;
+	margin-top: 1px;
+}
+.seachbox .seach{
+	width: 220px;
+	height: 32px;
+	float: left;
+	margin: 0;
+}
+.seachbox .seach .seach-text{
+	width: 202px;
+	height: 14px;
+	padding:9px;
+	border: 0px none;
+	font: 12px/14px "宋体";
+	color: #686868;
+}
+.seachbox .do-seach{
+	float: left;
+	display: block;
+	width: 35px;
+	height: 32px;
+	background:#1164c2 url(../images/personal/p-logo-header-seach.png) no-repeat;
+	border: 0px none;
+	cursor: pointer;
+	text-indent: -9999em;
+	overflow: hidden;/*??*/
+}
+/*seach*/
+/*设置结束*/
+/*头部结束*/
+/*main开始*/
+.main-body{
+	margin-bottom: 20px;
+}
+.main-body .p-side{
+	width: 218px;
+	height: 672px;
+	background: #f8f8f8;
+	border: 1px solid #e8e8e8;
+	float: left;
+	margin-right: 10px;
+}
+.main-body .p-side h3{
+	height: 50px;
+	font: 16px/50px "微软雅黑";
+	text-indent: 55px;
+}
+.main-body .p-side h3 a{
+	color: #474747;
+}
+.main-body .p-side ul{
+	width: 218px;
+	margin-top: -10px;
+}
+.main-body .p-side ul li{
+	height: 30px;
+	position: relative;
+	zoom: 1;
+}
+.main-body .p-side ul li a{
+	display: block;
+	height: 30px;
+	font: 14px/30px "宋体";
+	text-indent: 60px;
+	color: #686868;
+	position: relative;
+	zoom: 1;
+}
+.main-body .p-side ul li:hover a i, .main-body .p-side ul .s-new a i{
+	background: #0875F1;
+}
+.main-body .p-side ul li a:hover, .main-body .p-side ul .s-new a{
+	color: #0875f1;
+}
+.main-body .p-side ul li a i{
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #686868;
+	left: 55px;
+	top: 15px;
+}
+.main-body .p-side ul li a:hover i{
+	background: #0875f1;
+}
+.main-body .p-main{
+	width: 960px;
+	float: left;
+	padding: 0 10px;
+	box-shadow: 0 2px 1px #d6d6d6;
+}
+/*main结束*/
+/*分页开始*/
+.pages{
+	float: right;
+	margin: 20px 0 10px 0;
+}
+.pages .p-number{
+	float: left;
+}
+.pages .p-number a{
+	color: #474747;
+	border: 1px solid #e1e1e1;
+	background: #fff;
+}
+.pages .p-number a:hover{
+	border: 1px solid #0875F1;
+	color: #0875F1;
+}
+.pages .p-number .p-new:hover{
+	border: 1px solid #C1C1C1;
+	color: #fff;
+}
+.pages .p-number a, .pages .p-number b{
+	float: left;
+	display: block;
+	width: 28px;
+	height: 28px;
+	border-radius: 3px;
+	line-height: 28px;
+	text-align: center;
+	margin-right: 8px;
+	font-size: 16px;
+	font-family: "宋体";
+}
+.pages .p-number .p-prev, .pages .p-number .p-next{
+	width: 58px;
+	font: 12px/28px "宋体";
+}
+.pages .p-number .p-prev:hover, .pages .p-number .p-next:hover{
+	background: #0875F1;
+	border: 1px solid #c1c1c1;
+	color: #fff;
+}
+.p-prev i, .p-next i{
+	font: 16px/28px "宋体";
+	color: #0875F1;
+	font-style: normal;
+	vertical-align: middle;
+}
+.p-number .p-prev:hover i, .p-number .p-next:hover i{
+	color: #fff;
+}
+.pages .p-number .p-new{
+	background: #0875F1;
+	color: #fff;
+	cursor: default;
+	border: 1px solid #c1c1c1;
+}
+em, i, u{
+	font-style: normal;
+}
+.pages .p-skip{
+	float: left;
+	font: 12px/28px "宋体";
+}
+.pages .p-skip b{
+	font-weight: normal;
+}
+.pages .p-skip em{
+	float: left;
+}
+.pages .p-skip input{
+	float: left;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #e1e1e1;
+	text-align: center;
+	line-height: 28px;
+	border-radius: 3px;
+	color: #474747;
+}
+.pages .p-skip .btn{
+	float: left;
+	display: block;
+	width: 58px;
+	height: 28px;
+	border: 1px solid #e1e1e1;
+	text-align: center;
+	line-height: 28px;
+	background: #0875f1;
+	color: #fff;
+	border-radius: 3px;
+}
+/*分页结束*/

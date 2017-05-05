@@ -1,0 +1,272 @@
+body{
+	background: #FFF;
+}
+.login-header{
+	padding: 26px 0 22px;
+	width: inherit;
+	height: 52px;
+	background: #fff;
+	position: relative;
+	zoom: 1;
+}
+.box-shower{
+	width: inherit;
+	height: 5px;
+	background: url(../images/login/header-shower.png);
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+.login-header .sgin{
+	float: left;
+	font-size: 18px;
+	font-family: "microsoft yahei";
+	padding: 16px 18px;
+	margin-left: 38px;
+	position: relative;
+	zoom: 1;
+	color: #333;
+}
+.login-header .sgin::before{
+	content: "";
+	display: block;
+	width: 2px;
+	height: 18px;
+	background: #333;
+	position: absolute;
+	left: 0;
+	top: 18px;
+}
+.warp{
+	width: 980px;
+	margin: 0 auto;
+}
+.warp .logo{
+	float: left;
+	}
+.warp .logo a{
+	display: block;
+}
+.warp .logo .images-logo{
+	width: 128px;
+	height: 62px;
+}
+.warp .logo .images-text{
+	width: 156px;
+	height: 52px;
+	margin-left: 50px;
+}
+.warp .logo a img{
+	display: block;
+}
+.warp .welcome{
+	float: right;
+}
+.warp .welcome p{
+	float: left;
+	color: #686868;
+	font: 12px/20px "宋体";
+}
+.warp .welcome p .wel{
+	color: #ffa011;
+}
+.warp .welcome .weixin{
+	width: 20px;
+	height: 20px;
+	background: url(../images/login/login-weixin.png) no-repeat;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.content{
+	height: 400px;
+	background: #f5f5f5;
+	padding: 82px 0 0 0;
+}
+.content .banner {
+	width: 562px;
+	height: 303px;
+	float: left;
+}
+.content .banner a{
+	display: block;
+	width: 562px;
+	height: 303px;
+}
+.content .login-table{
+	float: right;
+	width: 380px;
+	height: 309px;
+	border-top: 4px solid #0875F1;
+	position: relative;
+}
+.content .login-table .table-bottom{
+	display: block;
+	width: 380px;
+	height: 16px;
+	background: url(../images/login/login-table-bottom.png) no-repeat;
+	position: absolute;
+	top: 305px;
+	left: 50px;
+}
+.content .login-table .t-header{
+	width: 378px;
+	height: 26px;
+	padding-top: 10px;
+	border: 1px solid #d3d3d3;
+	border-top: none;
+	border-bottom: none;
+	background: #FFFFFF;
+	font: 16px/26px "微软雅黑";
+	color: #0875f1;
+	text-align: center;
+}
+.content .login-table .t-con{
+	height: 268px;
+	width: 316px;
+	background: #fff;
+	border: 1px solid #D3D3D3;
+	border-top: none;
+	padding: 0 31px;
+	position: relative;
+	z-index: 2;
+}
+.content .login-table .t-con .tip{
+	width: 316px;
+	height: 22px;
+	margin-bottom: 5px;
+}
+.content .login-table .t-con .tip span{
+	display: block;
+	border: 1px solid #ffe0b8;
+	background: #fff8ce;
+	padding: 0 0 0 25px;
+	font: 12px/20px "宋体";
+	color: #7f7f7f;
+	position: relative;
+	width: 289px;
+	height: 20px;
+}
+.content .login-table .t-con .no-tip span{
+	display: none;
+}
+.content .login-table .t-con span .tip-icon{
+	position: absolute;
+	display: block;
+	width: 13px;
+	height: 13px;
+	background: url(../images/login/login-tip.png) no-repeat;
+	left: 6px;
+	top: 4px;
+}
+.login-table .t-con .item{
+	width: 244px;
+	height: 14px;
+	border: 1px solid #b0b0b0;
+	position: relative;
+	padding: 12px 34px 12px 38px;
+}
+.content .login-table .t-con .item2{
+	margin-top: 14px;
+}
+.content .login-table .t-con .click{
+	border: 1px solid #0875f1;
+}
+.content .login-table .t-con .click input{
+	color: #474747;
+}
+.content .login-table .t-con .item label{
+	display: block;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.content .login-table .t-con .click .no{
+	display: block;
+}
+.case-tips{ display:none; position:absolute; top:26px; left:30px; padding:0 10px; border:1px solid #ffd24c; background:#fff5d6; font:12px/28px "Arial"; color:#666; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+.case-tips .ico{ position:absolute; top:-5px; left:10px; display:block; width:9px; height:5px; font:0/0 "Arial"; background: url(../images/login/input-tip-icon-bg.png) no-repeat;}
+
+.login-table .t-con .item .no{
+	width: 34px;
+	height: 38px;
+	background: url(../images/login/login-item-icon-jianpan.png) no-repeat;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	display: none;
+}
+.content .login-table .t-con .item label i{
+	display: block;
+	position: absolute;
+}
+.content .login-table .t-con .item .tel i{
+	width: 16px;
+	height: 16px;
+	background: url(../images/login/login-item-icon-tel.png) no-repeat;
+	top: 11px;
+	left: 11px;
+}
+.content .login-table .t-con .item .password i{
+	width: 14px;
+	height: 19px;
+	background: url(../images/login/login-item-icon-password.png) no-repeat;
+	top: 9px;
+	left: 12px;
+}
+.login-table .t-con .item input{
+	width: 234px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	font-family:  arial,"宋体";
+	color: #666666;
+	*padding-top: 1px;
+}
+.content .login-table .t-con .item-safe{
+	margin-top: 16px;
+	width: 316px;
+	position: relative;
+}
+.content .login-table .t-con .item-safe .remanber input{
+	vertical-align: middle;
+	margin: 0 8px 0 0;
+}
+.content .login-table .t-con .item-safe .remanber label{
+	font-size: 12px;
+	color: #666666;
+}
+.content .login-table .t-con .item-safe .forgot{
+	position: absolute;
+	right: 0;
+	color: #666666;
+}
+.content .login-table .t-con .item-safe .forgot:hover{
+	color: #0088cc;
+	text-decoration: underline;
+}
+.content .login-table .t-con .sumbit{
+	width: 316px;
+	height: 40px;
+	background: #0875f1;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-top: 21px;
+	color: #fff;
+	font: 16px/40px "微软雅黑";
+	text-align: center;
+}
+.content .login-table .t-con .register{
+	width: 316px;
+	text-align: right;
+	margin-top: 10px;
+}
+.content .login-table .t-con .register a{
+	color: #666666;
+}
+.content .login-table .t-con .register a:hover{
+	color: #0088cc;
+	text-decoration: underline;
+}

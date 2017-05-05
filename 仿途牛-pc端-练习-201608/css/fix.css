@@ -1,0 +1,81 @@
+.clearfix{
+	zoom:1;
+}
+/*----------------解决ie6下浮动元素有margin，会触发双倍边距问题----------------------*/
+.web_top_ad_img_box a, .head_top_denglutiao a, .Ssanjia, .Kssanjiao, .head_banner_R_bottom_content_list{
+	display:inline;
+	zoom:1;
+}
+/*---------------------解决ie6下input控件的border：none；问题-----------------------*/
+input{
+	background:red;
+	background:#fff;
+}
+/*------------------解决ie6下form表单里的控件（input）的缝隙问题----------------------*/
+.head_form_input{
+	float:left;
+}
+/*--------------------解决ie6下嵌套关系的元素，子集元素的margin/padding上下值传递父级的问题-------------*/
+.nav_2_item_list, .nav_2_right_box, .web_content_right_TNitem_list, .R_TNitem_list_ico3_box, .R_TNitem_list_ico_text, .same_section_left_box_T, .pic4_bg_text, .Ssanjiao, .Ksanjiao, .head_Sina, .head_phone, .head_weixin, .head_banner_content_box, .head_SearchBox, .ChaoZhiTeMai_head, .ChaoZhiTeMai_nav_right, .pic_ChaoZhiTeMai_1_daojishi_box, .ChaoZhiTeMai_list{
+	overflow:hidden;
+	zoom:1;
+}
+/*------------------解决ie6中最小高度19px的问题-------------------------------*/
+
+.Search_ico, .nav_SJ_ico, .same_head_line, .WTravelNotes_ico, .PTravelNotes_ico, .R_item_2_box_list_line, .R_item_4_nav_line{
+	overflow: hidden;
+}
+.Search_ico_box{
+	/*background:url(../img/head_XBT.png) no-repeat 0 -3px;*/
+	/*height:13px;*/
+	/*padding:8px 21px 12px 26px;*/
+}
+.Search_ico{
+	background:url(../img/Search_ico.jpg) no-repeat;
+}
+/*----------调整游记模块的ico和文字之间对齐和间距的问题------------*/
+.WTravelNotes_ico{
+	margin-top:0;
+	margin-right:5px;
+}
+.PTravelNotes_ico{
+	margin-right:4px;
+}
+.same_more{
+	padding-top:5px;
+}
+
+/*-----------解决ie6下li标签里面元素浮动，会导致li标签下方有4px的间隙---------------*/
+
+
+
+/*--------------解决ie6下透明度--兼容问题------------------------------------*/
+.head_ad_item_bg, .pic1_right_box_bg, .pic4_bg_box{
+	filter:alpha(opacity=40);
+}
+.bg_box{
+	filter:alpha(opacity=60);
+}
+/*-----------解决ie6下display：inline-block不支持的问题-------------------------------*/
+.nav_home_box, .manyidu_text, .manyidu_img, .head_banner_R_item_text, .R_item_7_content_box a, .foot_item6_box a, .foot_item12_box a, .foot_item14_box a{
+	display:inline;
+	zoom:1;
+}
+
+/*----------解决ie6下 用于隐藏标题文本的text-indent：-9999px；不支持的问题---------------*/
+
+.ChaoZhiTeMai_nav_title, .same_title, .NR_content_item_title{
+	overflow: hidden;
+}
+/*------------------解决ie6中浮动元素(同级元素)有不同方向margin会触发双倍边距的问题---------------------*/
+
+
+.pic4_bg_text{
+	font-weight: normal;
+}
+
+.web_SideBar{
+	position: absolute;
+	right:0;
+	top:expression(eval(document.documentElement.scrollTop +100));
+}

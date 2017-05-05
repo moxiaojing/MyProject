@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>材多多</title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/person-common.css" />
+		<link rel="stylesheet" href="css/p-goods.css"/>
+	</head>
+	<body>
+		<div class="header">
+				<div class="header-content">
+					<div class="header-left">
+						<a href="#" class="cdd-home">材多多首页</a>
+						<span><i class="gps-icon"></i>[<a href="#" class="gps-title">北京市</a>]</span>
+					</div>
+					<div class="header-right">
+						<ul class="header-right-con">
+							<li class="header-login">
+								<p class="header-logining"><a href="#">superman</a><span>退出</span></p>
+								<i class="bor-right"></i>
+							</li>
+							<li class="my-duoduo clearfix" id="my-duoduo">
+								<div class="header">
+									<a href="#">我的材多多</a><i class="my-icon"></i>
+								</div>
+								<div class="content">
+									<p><a href="#">我的订单（<span>9</span>）</a></p>
+									<p><a href="#">商品管理</a></p>
+									<p class="last"><a href="#">客户咨询（<span>9</span>）</a></p>
+								</div>
+								<i class="bor-right"></i>
+							</li>
+							<li><a href="#">帮助中心</a><i class="bor-right"></i></li>
+							<li class="customerService clearfix">客服热线:<span>400-800-8888</span></li>
+							<li class="weixin" id="weixin">
+								<i class="weixin-icon"></i>
+								<div class="weixinhover">
+									<i class="arrow"></i>
+									<i class="erweima"></i>
+									<p>扫一扫关注官方微信</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="con-right"></div>
+				</div>
+		</div>
+		<div class="p-header">
+			<div class="warp clearfix">
+				<a class="p-logo" href="#"></a>
+				<div class="nav-banner">
+					<a href="#" class="current">首页</a>
+				</div>
+				<div class="personal-set">
+					<span class="title">个人设置<i></i></span>
+					<div class="con">
+						<a href="#">个人资料</a>
+						<i></i>
+						<a href="#">账号设置</a>
+					</div>
+				</div>
+				<a class="p-my-shopping" href="#"><i></i>我的采购单&gt;&gt;</a>
+				<div class="seachbox">
+					<form target="_blank" method="get" class="clearfix">
+						<div class="seach">
+							<input class="seach-text" type="text" autocomplete="off" maxlength="50" placeholder="请输入要搜索的内容"/>
+						</div>
+						<input type="submit" class="do-seach"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="warp main-body clearfix">
+			<i class="sider-border-bottom"></i>
+			<div class="p-side">
+				<h3 class=""><a href="#">个人中心</a></h3>
+				<ul class="p-nav clearfix">
+					<!--当前页加s-new-->
+					<li><a href="#"><i></i>我的订单</a></li>
+					<li  class="s-new"><a href="#"><i></i>收货地址</a></li>
+					<li><a href="#"><i></i>账户信息</a></li>
+					<li><a href="#"><i></i>账户安全</a></li>
+				</ul>
+			</div>
+			<div class="p-main">
+				<div class="section">
+					<div class="s-header clearfix">
+						<div class="lef">
+							<span class="title">收货地址</span>
+							<span class="tip">您已创建2个收货地址，最多可创建10个</span>
+						</div>
+						<div class="rig">
+							<a href="#" class="btn" id="new-goods-address"><em>+</em>新增收货地址</a>
+						</div>
+					</div>
+					<div class="s-content">
+						<div class="address ad-new">
+							<i class="exit"></i>
+							<h4>
+								<span class="name">刘德华</span>
+								<span><i>北京</i>-<em>朝阳区</em></span>
+							</h4>
+							<p><em>收 货 人：</em><span>刘德华</span></p>
+							<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+							<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+							<p><em>手　　机：</em><span>188xxxx1212</span></p>
+							<p><em>固定电话：</em></p>
+							<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">默认地址</a>
+								<a href="#" class="write">编辑</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section more">
+					<div class="s-header clearfix">
+						<div class="lef">
+							<span class="title">更多</span>
+							<div class="th">
+								<p class="cell1">收货人</p>
+								<p class="cell2">所在地区</p>
+								<p class="cell3">详细地址  </p>
+								<p class="cell4">手机/电话</p>
+							</div>
+						</div>
+					</div>
+					<div class="s-content" id="more-list">
+						<div class="add-list">
+							<div class="tr clearfix">               
+							<p class="cell1">刘德华</p>
+							<p class="cell2">北京</p>
+							<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+							<p class="cell4">138****1888</p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">设为默认地址</a>
+								<a href="#" class="write">编辑</a>
+								<a href="#" class="delete">删除</a>
+							</div>
+						</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+						<div class="add-list">
+							<div class="tr clearfix">               
+								<p class="cell1">刘德华</p>
+								<p class="cell2">北京</p>
+								<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+								<p class="cell4">138****1888</p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+						<div class="add-list">
+							<div class="tr clearfix">               
+							<p class="cell1">刘德华</p>
+							<p class="cell2">北京</p>
+							<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+							<p class="cell4">138****1888</p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">设为默认地址</a>
+								<a href="#" class="write">编辑</a>
+								<a href="#" class="delete">删除</a>
+							</div>
+						</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+						<div class="add-list">
+							<div class="tr clearfix">               
+							<p class="cell1">刘德华</p>
+							<p class="cell2">北京</p>
+							<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+							<p class="cell4">138****1888</p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">设为默认地址</a>
+								<a href="#" class="write">编辑</a>
+								<a href="#" class="delete">删除</a>
+							</div>
+						</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+						<div class="add-list">
+							<div class="tr clearfix">               
+							<p class="cell1">刘德华</p>
+							<p class="cell2">北京</p>
+							<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+							<p class="cell4">138****1888</p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">设为默认地址</a>
+								<a href="#" class="write">编辑</a>
+								<a href="#" class="delete">删除</a>
+							</div>
+						</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+						<div class="add-list">
+							<div class="tr clearfix">               
+							<p class="cell1">刘德华</p>
+							<p class="cell2">北京</p>
+							<p class="cell3">北京市  海淀区  四环到五环  中关村街道 鼎好大厦B座7层</p>
+							<p class="cell4">138****1888</p>
+							<div class="a-default clearfix">
+								<a href="#" class="default-addrss">设为默认地址</a>
+								<a href="#" class="write">编辑</a>
+								<a href="#" class="delete">删除</a>
+							</div>
+						</div>
+							<div class="address ad-old">
+								<i class="exit"></i>
+								<h4>
+									<span class="name">刘德华</span>
+									<span><i>北京</i>-<em>朝阳区</em></span>
+								</h4>
+								<p><em>收 货 人：</em><span>刘德华</span></p>
+								<p><em>所在地区：</em><span>北京 北京市 海淀区 四环到五环</span></p>
+								<p><em>详细地址：</em><span>中关村街道 鼎好大厦B座7层</span></p>
+								<p><em>手　　机：</em><span>188xxxx1212</span></p>
+								<p><em>固定电话：</em></p>
+								<p><em>邮　　箱：</em><span>8888@qq.com</span></p>
+								<div class="a-default clearfix">
+									<a href="#" class="default-addrss">设为默认地址</a>
+									<a href="#" class="write">编辑</a>
+									<a href="#" class="delete">删除</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-foot">
+				<ul class="clearfix">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">隐私条款</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li class="foot-list-last"><a href="#">意见反馈</a></li>
+				</ul>
+				<p class="footer-copyright">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005 © 2003-2014 TMALL.COM 版权所有</p>
+			</div>
+		</div>
+		<div class="mask" id="alert">
+			<div class="mask-con"></div>
+			<div class="p-alert overtentip" id="ztip">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig openwin-close"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">账户名与密码不匹配，<br/>请重新输入请填写手机号</p>
+					<div class="btn clearfix">
+						<a class="sure openwin-close">确定</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-alert" id="addrDelete">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig openwin-close" id="exit"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">确定要删除该收货地址吗？</p>
+					<div class="btn clearfix">
+						<a class="sure" id="delAddr">删除</a>
+						<a class="sure" id="btn-no openwin-close">不删除</a>
+					</div>
+					</div>
+				</div>
+			<div class="g-alert">
+				<div class="alert-con">
+					<div class="g-header">
+						<div class="lef">
+							<h4 id="harvest-title"></h4>
+						</div>
+						<span class="exit" id="alert-exit">
+							<i class="icon"></i>
+						</span>
+					</div>
+					<i class="box-shadow"></i>
+					<div class="g-con">
+						<div class="item clearfix get-p">
+							<span class="lable"><em>*</em>收货人：</span>
+							<div class="i-content clearfix">
+								<label class="input">
+									<input type="text">
+								</label>
+								<span class="tip"><i class="input-icon"></i>请您填写收货人姓名</span>
+							</div>
+						</div>
+						<div class="item clearfix where">
+							<span class="lable"><em>*</em>所在地区：</span>
+							<div class="i-content clearfix">
+								<select name="" id="">
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+									<option>请选择</option>
+								</select>
+								<div class="select">
+									<span class="title"><i></i>请选择</span>
+									<ul>
+										<li class="option last"></li>
+									</ul>
+								</div>
+								<div class="select">
+									<span class="title"><i></i>请选择</span>
+									<ul>
+										<li class="option last"></li>
+									</ul>
+								</div>
+							</div>
+							<span class="tip"><i class="input-icon"></i>请您填写收货人姓名</span>
+						</div>
+						<div class="item clearfix where-detail">
+							<span class="lable"><em>*</em>详细地址：</span>
+							<div class="i-content">
+								<label>
+									<input type="text">
+								</label>
+							</div>
+							<span class="tip"><i class="input-icon"></i>请您填写收货人姓名</span>
+						</div>
+						<div class="item clearfix tel">
+							<div class="list">
+								<span class="lable"><em>*</em>手机号码：</span>
+								<div class="i-content clearfix">
+									<label>
+										<input type="text">
+									</label>
+								</div>
+							</div>
+							<div class="list">
+								<span class="lable tel-guding">固定电话：</span>
+								<div class="i-content clearfix">
+									<label>
+										<input type="text">
+									</label>
+								</div>
+							</div>
+							<span class="tip"><i class="input-icon"></i>请您填写收货人姓名</span>
+						</div>
+						<div class="item clearfix email">
+							<span class="lable">邮箱：</span>
+							<div class="i-content clearfix">
+								<label>
+									<input type="text">
+								</label>
+								<span class="tip"><i class="input-icon"></i>请您填写收货人姓名</span>
+							</div>
+							<span class="mail-tip">用来接收订单提醒邮件，便于您及时了解订单状态</span>
+						</div>
+						<input  type="button" value="保存收货地址" class="submit-btn"/>
+						<p class="reminder item">温馨提示：材多多目前只支持向京、津、冀地区发货，其他地区陆续开通，敬请等待。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.2.6.pack.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/harvest.js"></script>
+	</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>hello world</title>
+    <link rel="stylesheet" type="text/css" href="css/glist.css"/>
+</head>
+<body>
+	<header class="cdd-header">
+		<div class="h-back">
+			<span>返回</span>
+		</div>
+		<div class="title">全部分类</div>
+		<div class="sever">客服</div>
+	</header>
+	<form class="cdd-seach">
+		<div class="cdd-seach-box">
+			<input type="text" placeholder="输入商品关键词" class="seach-text"/>
+			<input type="submit" class="seach-submit"/>
+		</div>
+	</form>
+	<div class="main clearfix">
+		<div class="rootList-box">
+			<div class="rootList" id="rootList">
+				<ul>
+					<li>
+						<a href="#" class="click" for="0">家装电线家装电线</a>
+					</li>
+					<li>
+						<a href="#" for="1">工程电缆</a>
+					</li>
+					<li>
+						<a href="#" for="2">开关插座</a>
+					</li>
+					<li>
+						<a href="#" class="click" for="3">家装电线家装电线</a>
+					</li>
+					<li>
+						<a href="#" for="4">工程电缆</a>
+					</li>
+					<li>
+						<a href="#" for="5">开关插座</a>
+					</li>
+					<li>
+						<a href="#" class="click" for="6">家装电线家装电线</a>
+					</li>
+					<li>
+						<a href="#" for="7">工程电缆</a>
+					</li>
+					<li>
+						<a href="#" for="8">开关插座</a>
+					</li>
+					<li>
+						<a href="#" class="click" for="9">家装电线家装电线</a>
+					</li>
+					<li>
+						<a href="#" for="10">工程电缆</a>
+					</li>
+					<li>
+						<a href="#" for="11">开关插座</a>
+					</li>
+					<li>
+						<a href="#" class="click" for="12">家装电线家装电线</a>
+					</li>
+					<li>
+						<a href="#" for="13">工程电缆</a>
+					</li>
+					<li>
+						<a href="#" for="14">开关插座</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="cdd-content" id="rootList-content">
+			<div class="content show">
+				<a class="go-look" href="#">查看更多家装电线</a>
+				<div class="this-con">
+					<div class="hot">
+						<p class="title">热门型号</p>
+						<ul>
+							<li>
+								<a href="#">BV</a>
+							</li>
+							<li>
+								<a href="#">BVR</a>
+							</li>
+							<li>
+								<a href="#">BVVB</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2-22</a>
+							</li>
+							<li>
+								<a href="#">WDZN-KYJV32</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<a class="go-look" href="#">查看更多工程电缆</a>
+				<div class="this-con">
+					<div class="hot">
+						<p class="title">热门型号</p>
+						<ul>
+							<li>
+								<a href="#">BV</a>
+							</li>
+							<li>
+								<a href="#">BVR</a>
+							</li>
+							<li>
+								<a href="#">BVVB</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2-22</a>
+							</li>
+							<li>
+								<a href="#">WDZN-KYJV32</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<a class="go-look" href="#">查看更多开关插座</a>
+				<div class="this-con">
+					<div class="hot">
+						<p class="title">热门型号</p>
+						<ul>
+							<li>
+								<a href="#">BV</a>
+							</li>
+							<li>
+								<a href="#">BVR</a>
+							</li>
+							<li>
+								<a href="#">BVVB</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2-22</a>
+							</li>
+							<li>
+								<a href="#">WDZN-KYJV32</a>
+							</li>
+							<li>
+								<a href="#">ZR-KVVP2</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/zepto.js"></script>
+	<script type="text/javascript">
+		// 类别切换
+		$("#rootList a").on("click",function(){
+			var length=$("#rootList a").length-1;//列表项的长度
+			var num=this.getAttribute("for");//for上的数字是index
+			$("#rootList a").removeClass("click");
+			$(this).addClass("click");
+			$("#rootList-content div.content").removeClass("show").eq(num).addClass("show");
+			var aListHeight=$(this).height();
+			var clickHeight=$(document.body).height();//可视区高度
+			if($("#rootList a")[length].getBoundingClientRect().bottom-clickHeight>0){
+				$("#rootList ul")[0].style.transform="translateY(-"+aListHeight*num+"px)";
+				$("#rootList ul")[0].style.WebkitTransform="translateY(-"+aListHeight*num+"px)";
+			}
+			return false;
+		});
+		//上下滑屏事件
+		$(document).on("swipe",function(ev){
+			if($(ev.target).parents("#rootList").length){
+				
+			}
+		});
+			
+	</script>
+</body>
+</html>

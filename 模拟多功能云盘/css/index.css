@@ -1,0 +1,676 @@
+body{
+	margin:0;
+	padding:0;
+	background:#6ea7b2;
+	font-size: 12px;
+	overflow: hidden;
+}
+h1, h3{
+	margin:0;
+}
+input{
+	padding: 0;
+	margin:0;
+	border:none;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+	border:none;
+}
+p,h3,h4{
+	margin:0;
+	padding:0;
+	
+}
+.clearfix:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+/*----------start--HTML---------------------------------------------------------*/
+#wrap{
+	width:100%;
+	margin:auto;
+	background:#fff;
+	overflow: hidden;
+}
+
+/*---------start--head--------------------------------------------*/
+#head{
+	height:70px;
+	width:100%;
+	min-width: 920px;
+}
+.title{
+	padding:0 28px;
+}
+.logo{
+	width: 132px;
+	height:70px;
+	
+	text-align: left;
+	float:left;
+}
+.logo a{
+	display: inline-block;
+	height:70px;
+	/*background:url(../img/logo.png) no-repeat 0 18px;*/
+}
+.logo a h1{
+	width:72px;
+	padding-left:60px;
+	font:18px/66px "微软雅黑";
+	color:#389cd1 ;
+	text-indent: -9999px;
+	/*background:url(../img/title.png) no-repeat right center;*/
+	background: url(../img/weiyun.png) no-repeat;
+}
+.head_right{
+	float:right;
+	width:140px;
+	height:40px;
+	margin-top:20px;
+}
+.head_right a{
+	display:inline-block;
+	height:40px;
+}
+.head_right img{
+	width:40px;
+	height:40px;
+}
+.head_right a span{
+	display: inline-block;
+	width:11px;
+	height:6px;
+	padding:15px 0 0 4px;
+	background:url(../img/ico.png) no-repeat 4px 15px;
+	
+}
+.set{
+	/*width:42px;*/
+	margin-left:9px;
+	padding-left:14px;
+	display: inline-block;
+	border-left:1px solid #e0e6e7;
+}
+.set div{/*/////////////////////////没有设置的图标////////////*/
+	width:16px;
+	height:16px;
+	text-indent: -9999px;
+	background:url(../img/ico_set.png) no-repeat;
+}
+/*---------start--content--body---------------------------------------*/
+#cont_box{
+	width:100%;
+	height:100%;
+}
+/*---------start--content--导航------------------------*/
+.cont_nav{
+	height:38px;
+	min-width: 920px;
+	padding:11px 20px 9px 25px;
+	background:#ecf0f6;
+	border:1px solid #d0d9de;
+}
+.nav_left{
+	float:left;
+	/*width:500px;*/
+	height:38px;
+	/*background:#B9B3CD;*/
+}
+.nav_left li{
+	float:left;
+	line-height:36px;
+	padding-left:20px;
+	padding-right:20px;
+	margin-right:10px;
+	height: 36px;
+	color:#66757f;
+	font-size:14px;
+	background:#fff;
+	border-radius: 4px;
+	cursor: pointer;/*鼠标变成小手*/
+}
+.nav_left li:nth-of-type(7){
+	padding-right:9px;
+	padding-left:10px;
+	width:20px;
+}
+
+.nav_left i{
+	float:left;
+	width:16px;
+	height:16px;
+	margin-top:11px;
+	margin-right:18px;
+}
+.nav_left li:nth-of-type(1) i{
+	background:url(../img/ico_load.png) no-repeat;
+}
+.nav_left li:nth-of-type(2) i{
+	background:url(../img/ico_share.png) no-repeat;	
+}
+.nav_left li:nth-of-type(3) i{
+	background:url(../img/ico_move.png) no-repeat;	
+}
+.nav_left li:nth-of-type(4) i{
+	background:url(../img/ico_rename.png) no-repeat;	
+}
+.nav_left li:nth-of-type(5) i{
+	background:url(../img/ico_del.png) no-repeat;	
+}
+.nav_left li:nth-of-type(6) i{
+	background:url(../img/ico_new.png) no-repeat;	
+}
+.nav_left li:nth-of-type(7) i{
+	background:url(../img/ico_redefine.png) no-repeat;	
+}
+.nav_right{
+	float:right;
+	height:38px;
+}
+.nav_right div{
+	float:left;
+	margin-right:10px;
+	height: 36px;
+	background:#fff;
+	border-radius: 4px;
+	padding:0 10px 0 10px;
+}
+.nav_right div:nth-of-type(1) span{
+	float:left;
+	width:5px;
+	border:1px solid #66757f;
+	border-radius: 1px;
+	height:14px;
+	margin-right:1px;
+	margin-top:10px;
+}
+.nav_right div:nth-of-type(1) span:nth-last-of-type(1){
+	background:#66757f;
+}
+.nav_right div:hover{
+	background:#55addc;
+}
+.nav_right div:nth-of-type(2){/*-----有-排序和缩略图-功能-的div-----*/
+	padding-right:12px;
+	position:relative;
+}
+.nav_right div:nth-of-type(2) i:nth-of-type(1){
+	float: left;
+	width:16px;
+	height:16px;
+	margin-top:10px;
+	margin-right:8px;
+	background:url(../img/ico_show2.png) no-repeat;
+}
+.nav_right div:nth-of-type(2) i:nth-of-type(2){
+	float: left;
+	width:10px;
+	height:6px;
+	margin-top:17px;
+	
+	background:url(../img/ico2.png) no-repeat;
+	
+}
+.nav_right div:nth-of-type(2) ul{
+	background:#fff;
+	width:130px;
+	border:1px solid #55addc;
+	position:absolute;
+	top:47px;
+	left:-75px;
+	display:none;
+	
+}
+.nav_right div:nth-of-type(2) ul li{
+	height:36px;
+}
+
+.nav_right div:nth-of-type(2) ul li span{
+	float:left;
+	line-height:36px;
+	margin-left:5px;
+}
+.nav_right div:nth-of-type(2) ul li a{
+	float:left;
+	width:16px;
+	height:16px;
+	margin:10px 12px 10px 12px;
+}
+.nav_right div:nth-of-type(2) ul li:nth-of-type(1) a{
+	background:url(../img/ico_time.png) no-repeat;
+}
+.nav_right div:nth-of-type(2) ul li:nth-of-type(2) a{
+	background:url(../img/ico_word.png) no-repeat;
+}
+.nav_right div:nth-of-type(2) ul li:nth-of-type(3) a{
+	background:url(../img/ico_show2.png) no-repeat;
+}
+.nav_right div:nth-of-type(2) .show{
+	display:block;
+}
+
+
+/*---------start--content--main-----------------------*/
+.cont_main{
+	height:100%;
+	width:100%;
+	background:#e1e8ed;
+	position:relative;
+}
+/*--------start--content--main--left------------*/
+.cont_left{
+	width:258px;
+	max-height:600px;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	margin-right:2px;
+	border-right:2px solid #e1e8ed;
+	/*overflow: auto;*/
+}
+.treeList, .treeList{
+	height:100%;
+	background:#fff;
+
+}
+.treeList ul{
+	/*display:none;*/
+}
+
+.treeList li{
+	width:100%;
+	background:#fff;
+	overflow: hidden;
+	/*margin-bottom:2px;*/
+	
+}
+
+.treeList li em{
+	float:left;
+	width:10px;
+	height:10px;
+	margin-top:13px;
+	margin-right:10px;
+}
+.sanjiaoNone{
+	background:none;
+}
+.sanjiaoClose{
+	/*margin-left:15px;*/
+	background: url(../img/ico_close11.png) no-repeat;
+}
+.sanjiaoOpen{
+	background: url(../img/ico_open11.png) no-repeat;
+}
+.treeList li h3 div{
+	padding-left:20px;
+	/*padding-left:10px;*/
+	width:238px;
+	height:36px;
+	cursor: pointer;/*鼠标变成小手样式*/
+	position:relative;
+}
+.treeList li h3:hover,.treeList li .active{
+	background: #e1e8ed;
+}
+/*
+.ico_file{
+	position:absolute;
+	top:5px;
+
+	width:16px;
+	height:16px;
+	background:url(../img/ico_close1.png) no-repeat;
+	margin:10px;
+	vertical-align: top;
+}*/
+
+.treeList li h3 span{
+	display:block;
+	font-size:14px;
+	line-height:36px;
+	height:36px;
+	padding-left:25px;
+	background:url(../img/ico_close1.png) no-repeat left center;
+	overflow: hidden;/*配合下面的样式使用*/
+    text-overflow: ellipsis;/*文字省略*/
+    white-space: nowrap;/*强制不换行*/
+}
+
+/*--------start--content--main--right-----------*/
+.cont_right{
+	padding-left:260px;
+	width:100%;
+	height:100%;
+	background: #f5f8fa;
+}
+/*-------------导航部分--------*/
+.cont_top{
+	height:48px;
+	border-bottom:2px solid #e1e8ed;
+	position:relative;
+}
+.all{
+	width:16px;
+	height:16px;
+	border:1px solid #d0d9de;
+	position:absolute;
+	left:15px;
+	top:15px;
+	color:#fff;
+	text-align: center;
+	line-height: 16px;
+	cursor: pointer;/*鼠标变成小手样式*/
+}
+#nav{
+	height:48px;
+	line-height:48px;
+	font-size:14px;
+	position:relative;
+	left:35px;
+}
+#nav span{
+	display: inline-block;
+	height:38px;
+	padding-left:10px;
+	padding-right:18px;
+	background:url(../img/1234567.png) no-repeat right 13px;
+}
+#nav .nav_seclect{
+	background:none;
+}
+#nav a{
+	display: inline-block;
+	height:48px;
+	line-height:48px;
+	font-family: "微软雅黑";
+	cursor: pointer;/*鼠标变成小手样式*/
+	
+}
+
+#nav span:hover a, #nav span .hover{
+	color: #55addc;
+	border-bottom:2px solid #55addc;
+}
+/*----------文件夹--------------------------*/
+.files_box{
+	width:100%;
+	height:80%;
+}
+#files{
+	width:100%;
+	height:100%;
+	padding-top:40px;
+	box-sizing: border-box;
+	background:#f5f8fa;
+}
+#files li{
+	float:left;
+	width:178px;
+	height:178px;
+	margin-left:40px;
+	margin-bottom:40px;
+	box-sizing: border-box;
+	cursor: pointer;/*鼠标变成小手样式*/
+	border-radius:4px;
+	text-align: center;
+	position:relative;
+	background:#ebeff0 url(../img/img_file.png) no-repeat 50px 50px;
+}
+#files .selectLi{
+	box-shadow: 0 0 3px #55addc;
+	border:1px solid #55addc;
+	background-color:#fff;
+}
+#files li:hover{
+	box-shadow: 0 0 3px #55addc;
+	border:1px solid #55addc;
+	background-color:#fff;
+}
+#files li:hover .checkbox{
+	opacity: 1;
+	background:#fff;
+}
+#files li:hover input{
+	background:#fff;
+}
+#files li div{
+	width:16px;
+	height:16px;
+	border:1px solid #55addc;
+	position: absolute;
+	left:10px;
+	top:10px;
+	color:#fff;
+}
+#files li .checkbox{
+	opacity: 0;
+}
+#files li .checkedBox{
+	opacity: 1;
+	background:#55addc;
+	
+}
+/*.name{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width:100%;
+	height:50px;
+	font-size:14px;
+	line-height:50px;
+}*/
+#files li input{
+	display: inline-block;
+	width:100px;
+	height:22px;
+	font-size:14px;
+	text-align: center;
+	margin-top:135px;
+	/*position:absolute;*/
+	/*bottom:10px;
+	left:25%;*/
+	background:#ebeff0;
+	/*display: none;*/
+}
+#zhezhao {
+	position:absolute;
+	left:50%;
+	top:20%;
+	padding-top:40px;
+	box-sizing: border-box;
+	background-color:#f5f8fa;
+	text-align: center;
+	font-size:14px;
+	color:#66757f;
+	display:none;
+}
+.show{
+	display: block;
+}
+#zhezhao div{
+	width:180px;
+	height:127px;
+	margin-bottom:20px;
+	background:url(../img/none_bg.png) no-repeat center center;
+}
+#zhezhao strong{
+	font-size: 24px;
+	line-height: 30px;
+}
+/*--------提示框-------------------------------------------------*/
+
+#popBox{
+	padding:10px 20px;
+	/*background:#EE9700;*/
+	color:#fff;
+	position:absolute; 
+	top:-50px;
+	left:45%;
+	border-radius:20px;
+}
+/*---------框选效果的框的样式----------------------------------*/
+.kuang{
+	background: #000;
+	border: 1px dashed #000;
+	opacity: 0.3;
+	position: absolute;
+}
+
+/*--------功能性弹框--------------------------------------------*/
+
+#funPopBox{
+	position:fixed;
+	top:20%;
+	left:30%;
+	z-index: 1;
+}
+
+.show_funPopBox{
+	display:block;
+	border:2px solid #55addc;
+	border-radius:8px;
+	
+}
+
+
+/*---------------确认删除---------------*/
+.delPopBox{
+	width:278px;
+	height:130px;
+	background: #fff;
+	text-align: center;
+	display:none;
+	overflow: hidden;
+	padding:20px;
+	word-spacing: -6px;
+}
+.close_ico {
+	display: block;
+	/*margin:15px;*/
+	margin-left:260px;
+	text-align: right;
+	width:15px;
+	height:15px;
+	background:url(../img/xuebitu.png) no-repeat -325px -32px;
+}
+.tipsBox{
+	display:block;
+	text-align: center;
+	padding:15px 0;
+}
+.wenhao_ico{
+	display:inline-block;	
+	width:36px;
+	height:36px;
+	margin-right:10px;
+	margin-left:-12px;
+	background:url(../img/xuebitu.png) no-repeat 0 -303px;
+	
+}
+.tipsText{
+	display:inline-block;
+	line-height: 28px;
+}
+.tipsText h4{
+	font-size: 16px;
+}
+.btnBox span{
+	display:inline-block;
+	padding:0 10px;
+	line-height:28px;
+	margin:0 15px;
+	color:#55addc;
+	border:1px solid #55addc;
+	border-radius: 2px;
+}
+/*.btnBox span:nth-of-type(1){
+	color:#fff;
+	background:#55addc;
+}*/
+/*.btnBox span:nth-of-type(2){
+	background:#02B517;
+}*/
+
+.btnBox span:hover{
+	color:#fff;
+	background:#55addc;
+}
+
+/*----------------正在删除------------*/
+.delingPopBox{
+	width:226px;
+	height:76px;
+	background:#fff;
+	display:none;
+}
+.delingPopBox div{
+	display:inline-block;
+	height:40px;
+	width:40px;
+	margin:15px 25px;
+	border:1px dashed #c7cdd1;
+	border-radius: 20px;
+	text-align: center;
+	line-height:40px;
+}
+
+
+/*---------------移动到---------------*/
+.saveAsPopBox3{
+	width:400px;
+	height:420px;
+	background:#fbf5ca;
+	display:none;
+}
+
+.moveTo{
+	margin:30px 50px;
+	height:200px;
+	border:1px solid #e1e8ed;
+	overflow: auto;
+}
+.moveTo h3{
+	border:none;
+}
+
+/*-------------拖拽文件夹移动到另一个文件夹中-------------------------------*/
+.dragFile{
+	/*width: 100px;
+	height: 100px;*/
+	/*background:red;*/
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:50;
+}
+
+/*.drag_fileImg{
+	width:50px;
+	height:50px;
+	background-size: 50px 50px;
+	background: url(../img/img_file.png) no-repeat;
+}*/
+
+.drag_fileNum{
+	font-size: 20px;
+	width:30px;
+	height:30px;
+	border-radius: 15px;
+	background:#328FBE;
+	color:#fff;
+	line-height: 30px;
+	text-align: center;
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>材多多</title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/person-common.css" />
+		<link rel="stylesheet" href="css/order-detail.css"/>
+	</head>
+	<body>
+		<div class="mask">
+			<!--遮罩层共有3个弹出框，给mask加p-delete是点击删除的显示，加p-Goods是点击确认收货的弹出框显示，加p-cancel是点击取消订单的时候弹出  什么都不加就什么都不显示-->
+			<div class="mask-con"></div>
+			<div class="p-alert cancel-order">
+				<div class="alert-header clearfix">
+					<p class="header-lef">提交</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-section">
+					<h3 class="section-header">确定取消订单，请选择取消原因：</h3>
+					<!--加click-->
+					<div class="select">
+						<span class="title">请选择取消原因<i></i></span>
+						<ul>
+							<li class="option">买家取消订单</li>
+							<li class="option">卖家库存不足</li>
+							<li class="option">其它</li>
+						</ul>
+					</div>
+					<div class="btn">
+						<a href="#">确定</a>
+						<a href="#">不取消</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-alert Goods-sure">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">请确认已经收到商品</p>
+					<div class="btn clearfix">
+						<a class="sure">确定</a>
+						<a class="sure">没收到</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-alert delete-sure">
+				<div class="alert-header">
+					<p class="header-lef">提示</p>
+					<i class="header-rig"></i>
+				</div>
+				<div class="alert-con">
+					<p class="text">确定要删除该订单？</p>
+					<div class="btn clearfix">
+						<a class="sure">确定</a>
+						<a class="sure">不删除</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+				<div class="header-content">
+					<div class="header-left">
+						<a href="#" class="cdd-home">材多多首页</a>
+						<span><i class="gps-icon"></i>[<a href="#" class="gps-title">北京市</a>]</span>
+					</div>
+					<div class="header-right">
+						<ul class="header-right-con">
+							<li class="header-login">
+								<p class="header-logining"><a href="#">superman</a><span>退出</span></p>
+								<i class="bor-right"></i>
+							</li>
+							<li class="my-duoduo clearfix" id="my-duoduo">
+								<div class="header">
+									<a href="#">我的材多多</a><i class="my-icon"></i>
+								</div>
+								<div class="content">
+									<p><a href="#">我的订单（<span>9</span>）</a></p>
+									<p><a href="#">商品管理</a></p>
+									<p class="last"><a href="#">客户咨询（<span>9</span>）</a></p>
+								</div>
+								<i class="bor-right"></i>
+							</li>
+							<li><a href="#">帮助中心</a><i class="bor-right"></i></li>
+							<li class="customerService clearfix">客服热线:<span>400-800-8888</span></li>
+							<li class="weixin" id="weixin">
+								<i class="weixin-icon"></i>
+								<div class="weixinhover">
+									<i class="arrow"></i>
+									<i class="erweima"></i>
+									<p>扫一扫关注官方微信</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="con-right"></div>
+				</div>
+		</div>
+		<div class="p-header">
+			<div class="warp clearfix">
+				<a class="p-logo" href="#"></a>
+				<div class="nav-banner">
+					<a href="#" class="current">首页</a>
+				</div>
+				<div class="personal-set">
+					<span class="title">个人设置<i></i></span>
+					<div class="con">
+						<a href="#">个人资料</a>
+						<i></i>
+						<a href="#">账号设置</a>
+					</div>
+				</div>
+				<a class="p-my-shopping" href="#"><i></i>我的采购单&gt;&gt;</a>
+				<div class="seachbox">
+					<form target="_blank" method="get" class="clearfix">
+						<div class="seach">
+							<input class="seach-text" type="text" autocomplete="off" maxlength="50" placeholder="请输入要搜索的内容"/>
+						</div>
+						<input type="submit" class="do-seach"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="warp main-body">
+			<div class="breadline clearfix">
+				<div class="list">
+					<span>个人中心</span>
+					<i>></i>
+				</div>
+				<div class="list">
+					<span>我的订单</span>
+					<i>></i>
+				</div>
+				<div class="list">
+					<span>订单：12312312312312</span>
+				</div>
+			</div>
+			<div class="item">
+				<div class="logistics clearfix">
+					<div class="lef">
+						<div class="text">
+							<span class="list num">订单号：<em>123123123132</em></span>
+							<span class="list">状态：<em class="no">待付款</em></span>
+							<p class="rig-list"><span>下单时间：<em>2015-12-12</em><em>14:23:58</em></span></p>
+						</div>
+						<div class="logistics-information">
+							<p class="list">尊敬的客户，请您在 <em>24</em> 小时内完成支付，否则订单会自动取消。</p>
+						</div>
+					</div>
+					<div class="rig clearfix">
+						<div class="btn">
+							<a href="#" class="button">立即付款</a>
+							<a href="#" class="d-order">取消订单</a>
+						</div>
+					</div>
+				</div>
+				<p class="import-tip">重要提示：材多多平台销售商不会以<em>订单异常、系统升级</em>为由，要求您点击任何链接进行付款。</p>
+				<div class="order-state">
+					<ul class="clearfix">
+						<!--到哪步就给那个li加上complete类就变颜色啦~-->
+						<li class="no-arrow complete">
+							<div class="imgs-tip">
+								<em>1</em>
+								<i class="lef"></i>
+								<span>提交订单</span>
+							</div>
+							<span class="time"><em>2015-12-24</em><em>18:30:25</em></span>
+						</li>
+						<li>
+							<div class="imgs-tip">
+								<em>2</em>
+								<i class="lef"></i>
+								<i class="rig"></i>
+								<span>卖家发货</span>
+							</div>
+							<span class="time"><em>2015-12-24</em><em>18:30:25</em></span>
+						</li>
+						<li>
+							<div class="imgs-tip"><em>3</em><i class="lef"></i><i class="rig"></i><span>验货付款</span></div>
+							<span class="time"><em>2015-12-24</em><em>18:30:25</em></span>
+						</li>
+						<li class="no-arrow">
+							<div class="imgs-tip"><em>4</em><i class="rig"></i><span>交易完成</span></div>
+							<span class="time"><em>2015-12-24</em><em>18:30:25</em></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section w-information">
+				<div class="s-header">
+					<h3>物流信息</h3>
+				</div>
+				<div class="s-content clearfix">
+					<p class="list"><span>物流公司：</span><em>顺丰快递</em></p>
+					<p class="list"><span>物流单号：</span><em>SF123456u381203312</em></p>
+				</div>
+			</div>
+			<div class="section o-information">
+				<div class="s-header">
+					<h3>订单信息</h3>
+				</div>
+				<div class="s-content clearfix">
+					<div class="list clearfix">
+						<p class="title">收货人信息</p>
+						<p class="text">
+							<span class="t-li"><i>收  货  人 ：</i><em>刘德华234</em></span>
+							<span class="t-li"><i>地　　址：</i><em>北京市海淀区中关村街道</em></span>
+							<span class="t-li"><i>手机号码： </i><em>187****2356</em></span>
+						</p>
+					</div>
+					<div class="list clearfix last">
+						<p class="title">支付及配送方式</p>
+						<p class="text">
+							<span class="t-li clearfix"><i>支付方式：</i><em>在线支付</em></em></span>
+							<span class="t-li clearfix"><i>商品金额：</i><em>¥9999.90</em></span>
+							<span class="t-li clearfix"><i>运　　费：</i><em> ¥9999.90</em></span>
+							<span class="t-li clearfix"><i>商家优惠：</i> <em>－¥99.00</em></span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="s-table">
+				<div class="t-header">
+					<div class="company-tip">
+						<span class="company">无锡江南电缆有限公司</span>
+						<span class="tip">联系客服</span>
+					</div>
+				</div>
+				<table class="table">
+					<tr>
+						<th class="cell1">品牌</th>
+						<th class="cell2">型号</th>
+						<th class="cell3">规格</th>
+						<th class="cell4">数量</th>
+						<th class="cell5">单价</th>
+						<th class="cell6">小计</th>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+				</table>
+				<div class="o-detail">
+					<h3 class="title">商品备注：</h3>
+					<!--没有文字是加上类nohave-->
+					<p class="text nohave"/>订单备注内容订单备注内容订单备注内容订单备注内容，若没有内容显示“无” </p>
+				</div>
+			</div>
+			<div class="s-table">
+				<div class="t-header">
+					<div class="company-tip">
+						<span class="company">无锡江南电缆有限公司</span>
+						<span class="tip">联系客服</span>
+					</div>
+				</div>
+				<table class="table">
+					<tr>
+						<th class="cell1">品牌</th>
+						<th class="cell2">型号</th>
+						<th class="cell3">规格</th>
+						<th class="cell4">数量</th>
+						<th class="cell5">单价</th>
+						<th class="cell6">小计</th>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+				</table>
+				<div class="o-detail">
+					<h3 class="title">商品备注：</h3>
+					<!--没有文字是加上类nohave-->
+					<p class="text nohave"/>订单备注内容订单备注内容订单备注内容订单备注内容，若没有内容显示“无” </p>
+				</div>
+			</div>
+			<div class="s-table">
+				<div class="t-header">
+					<div class="company-tip">
+						<span class="company">无锡江南电缆有限公司</span>
+						<span class="tip">联系客服</span>
+					</div>
+				</div>
+				<table class="table">
+					<tr>
+						<th class="cell1">品牌</th>
+						<th class="cell2">型号</th>
+						<th class="cell3">规格</th>
+						<th class="cell4">数量</th>
+						<th class="cell5">单价</th>
+						<th class="cell6">小计</th>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+					<tr>
+						<td>五彩</td>
+						<td>YJV</td>
+						<td>22(4*185)-0.6/1kv</td>
+						<td>100</td>
+						<td><em>¥</em>999.99</td>
+						<td><em>¥</em>999.99</td>
+					</tr>
+				</table>
+				<div class="o-detail">
+					<h3 class="title">商品备注：</h3>
+					<!--没有文字是加上类nohave-->
+					<p class="text nohave"/>订单备注内容订单备注内容订单备注内容订单备注内容，若没有内容显示“无” </p>
+				</div>
+			</div>
+			
+			<div class="pay-money clearfix">
+				<div class="content">
+					<p class="list clearfix">
+						<span class="title">共<i>2</i>件商品，总金额：</span>
+						<em class="money">¥9999.99</em>
+					</p>
+					<p class="list clearfix">
+						<span class="title">运费：</span>
+						<em class="money">¥00.00</em>
+					</p>
+					<p class="list clearfix">
+						<span class="title">商家优惠：</span>
+						<em class="money">¥99.00</em>
+					</p>
+					<p class="sum clearfix">
+						<span class="title">应收金额：</span>
+						<em class="money">¥9999.99</em>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-foot">
+				<ul class="clearfix">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">隐私条款</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li class="foot-list-last"><a href="#">意见反馈</a></li>
+				</ul>
+				<p class="footer-copyright">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005 © 2003-2014 TMALL.COM 版权所有</p>
+			</div>
+		</div>
+		<script src="js/jquery-1.2.6.pack.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/order-detail.js"></script>
+	</body>
+</html>

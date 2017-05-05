@@ -1,0 +1,520 @@
+/*header修改*/
+.header-left .cdd-home{
+	cursor: default;
+}
+/*header*/
+.nav-all .nav-all-dd{
+	display: block;
+}
+.nav-all .nav-all-dt .nav-all-right, .con-nav-con .hover .nav-all-dt .nav-all-right{
+	display: none;
+}
+.nav-top ul li .hover{
+	display: block;
+	height: 34px;
+	padding: 0 25px;
+	color: #000;
+	background: #1164c2;
+	text-decoration: none;
+	color: #fff;
+}
+.rank .rank-con{
+	border: none;
+}
+/*banner-start*/
+.banner{
+	height: 300px;
+	overflow: hidden;
+	}
+.foucs{
+	height: 300px;
+	position: relative;
+}
+.foucs .foucs-list{
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.foucs .foucs-list img{
+	display: block;
+	border: 0 none;
+	vertical-align: middle;
+	position: relative;
+	left: 50%;
+	margin: 0 0 0 -960px;
+}
+.banner-list{
+	display: block;
+	position: relative;
+	margin: -30px auto 0;
+	text-align: center;
+	z-index: 1;
+	*width: 100px;
+}
+.banner-list ul li{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #c2c2c2;
+	margin: 0 5px;
+	box-shadow: 2px 2px 2px #3931cd;
+	*float: left;
+	cursor: pointer;
+}
+.banner-list ul .active{
+	background: #ffa011;
+}
+
+.banner-login{
+	width: 1200px;
+	margin: 0  auto;
+	z-index: 2;
+	position: relative;
+}
+.banner-right{
+	width: 220px;
+	height: 300px;
+	position: absolute;
+	top: -300px;
+	right: 0;
+	background: #fff;
+	float: right;
+	box-shadow: 0px 1px 0px #d6d6d6,0px 1px 0px #d6d6d6,0px 1px 0px #d6d6d6,0px 3px 3px #d6d6d6;
+}
+.banner-login-con{
+	width: 220px;
+	height: 190px;
+	background: #fff;
+}
+.login-nav{
+	display: block;
+	height: 30px;
+}
+.login-nav .text, .login-nav .hover{
+	display: block;
+	width: 50%;
+	float: left;
+	height: inherit;
+	text-align: center;
+	font:14px/30px "microsoft yahei";
+	cursor: pointer;
+}
+.login-nav span{
+	display: block;
+	border-bottom: 1px solid #efefef;
+	background: #f7f7f7;
+	float: left;
+}
+.login-nav .hover{
+	color: #2987f3;
+	background: #fff;
+	border-bottom: 1px solid #fff;
+	width: 100%;
+}
+.login-content{
+	height: 269px;
+	padding: 0 10px;
+	/*box-shadow:  0 2px 3px #888 inset;*/
+}
+.login-content input{
+	width: 190px;
+	height: 28px;
+	*height: 20px;
+	border: 1px solid #e5e5e5;
+	margin: 10px 0;
+	padding-left:8px;
+	*padding: 8px 0 0 8px;
+	color: #ababab;
+}
+.login-content .passwod-number{
+	margin: 0 0 10px 0;
+}
+.login-content .login-con-submit{
+	color: #fff;
+	display: block;
+	width: 198px;
+	height: 30px;
+	background: url(../images/login-btn.png) repeat-x;
+	text-align: center;
+	font: 12px/30px "宋体";
+	letter-spacing: 2px;
+}
+.login-content .tip{
+	width: 198px;
+	height: 32px;
+}
+.login-content .tip a{
+	font: 12px/32px "宋体";
+	color: #ababab;
+	float: right;
+}
+.login-content .tip .login-reg{
+	float: left;
+	color: #2987f3;
+}
+.business-login .login-nav{
+	font: 12px/30px "宋体";
+}
+.hot-news{
+	height: 105px;
+}
+.banner-right .new-header{
+	height: 28px;
+	background: #f7f7f7;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	text-align: center;
+	font: 14px/28px "microsoft yahei";
+}
+/*bus-log-start*/
+.business-nav-rig, .private-nav-rig{
+	width: 70px;
+	height: 30px;
+	text-align: center;
+}
+.business-nav-rig a, .private-nav-rig a{
+	color: #ababab;
+	font: 12px/30px "宋体";
+}
+.business-nav-lef, .private-nav-lef{
+	width: 150px;
+	height: 30px;
+}
+.business-nav-lef a, .private-nav-lef a{
+	color: #ffa011;
+	padding-left: 10px;
+	text-decoration: underline;
+	font: 12px/30px "宋体";
+}
+.business-login .login-con-submit, .private-login .login-con-submit, .private-login-redirct .login-con-submit{
+	margin: 20px 0 10px 0;
+}
+.login-content .log-mangs a{
+	display: block;
+	width: 28px;
+	height: 36px;
+	float: left;
+	letter-spacing: 2px;
+	text-align: center;
+	font: 12px/18px "宋体";
+	padding: 11px 15px;
+	border: 1px solid #e5e5e5;
+	color: #0875f1;
+	margin-right: 10px;
+	background: #fff;
+}
+.login-server{
+	width: 100%;
+	margin: 6px 0 0 0;
+}
+.login-server .server-con{
+	width: 110px;
+	height: 25px;
+	line-height: 24px;
+	margin: 0 auto;
+}
+.login-server .server-con i, .login-server .server-con span{
+	float: left;
+	margin: 0 3px;
+	color: #0875f1;
+}
+.login-server .server-con i{
+	width: 25px;
+	height: 25px;
+	background: url(http://wpa.qq.com/pa?p=2:3183790637:52) no-repeat;
+}
+.login-content .log-mangs a:hover{
+	background: #dfeeff;
+}
+.login-content  .log-mangs .last{
+	margin-right: 0px;
+}
+.private-login-redirct .login-content .log--redirct-mangs{
+	width: 169px;
+	height: 52px;
+	padding: 6px 10px 0 19px;
+	border: 1px solid #ffdda9;
+	font: 12px/22px "宋体";
+}
+.private-login-redirct .login-content .log--redirct-mangs a{
+	font:12px/22px "宋体";
+	display: block;
+	float: right;
+	border: none;
+	color: #0875f1;
+}
+/*bus-log-end*/
+.banner-right .new-header i{
+	display: inline-block;
+	width: 20px;
+	height: 28px;
+	background: url(../images/gonggao24png.png) no-repeat;
+	vertical-align: middle;
+}
+.banner-right .new-header span{
+	margin-left: 10px;
+}
+.new-text{
+	width: 210px;
+	padding: 4px 0 0 10px;
+	background: #fff;
+}
+.new-text ul li{
+	height: 24px;
+	line-height: 24px;
+}
+.new-text .new-red{
+	color:red;
+}
+.new-text ul li a{
+	color: #686868;
+}
+.new-text ul li a:hover{
+	color: #ffa011;
+}
+/*banner-end*/
+/*content---slection-----start*/
+.section{
+	width: 1200px;
+	margin:  20px auto;
+}
+.section1{
+	height: 220px;
+}
+.section1 .section-item{
+	display: block;
+	float: left;
+	width: 277px;
+	height: 192px;
+	border: 1px solid #e5e5e5;
+	margin-left: 21px;
+	padding: 13px;
+}
+.section1 .section1-item1{
+	float: left;
+	width: 220px;
+	height: 220px;
+	background: url(../images/xdxd.png) no-repeat;
+}
+.section1 .section-item:hover{
+	border: 2px solid #0875f1;
+	width: 277px;
+	height: 192px;
+	padding:12px;
+}
+.section1 .section-item .sect-img{
+	width:141px; 
+	height:188px; 
+	float: left;
+}
+.section1 .section-item img{
+	height: 188px;
+	width: 141px;
+}
+.right{
+	width: 117px;
+	height: 128px;
+	float: right;
+	margin-top: 29px;
+}
+.right a{
+	display: block;
+	width: inherit;
+	font: 12px/20px "宋体";
+	color: #000000;
+	letter-spacing: 1px;
+}
+.right a:hover{
+	text-decoration: underline;
+}
+.right p{
+	height: 22px;
+	font: 11px/22px "microsoft yahei";
+}
+.right .new-price{
+	font-family: Arial,Verdana,"microsoft yahei";
+}
+.new-price span{
+	font-size: 14px;
+	font-weight: 600;
+	color: #da0000;
+}
+.old-price{
+	color: #b1b1b1;
+}
+.section .section-header{
+	height: 31px;
+	font: 18px/31px "microsoft yahei";
+	border-bottom: 3px solid #0875f1;
+}
+.section-header h3{
+	display: block;
+	float: left;
+	width: 36px;
+	height: 31px;
+	background: url(../images/f1_24png.png) no-repeat;
+	text-align: center;
+	font: 20px/34px "microsoft yahei";
+	color: #fff;
+	overflow: hidden;
+}
+.section-header span{
+	padding: 0 10px;
+	color: #0875f1;
+}
+.section-filer{height: 95px;}
+.section-filer dl{
+	width: 569px;
+	float: left;
+	margin: 19px 0;
+	padding: 0 15px;
+	border-right: 1px solid #e5e5e5;
+}
+.section-filer .dl1{
+	border: none;
+}
+.section-filer dl dt{
+	float: left;
+	margin-top:7px;
+}
+.section-filer dl dd{
+	float: left;
+	width: 420px;
+}
+.section-filer dl dd a{
+	font: 14px/24px "microsoft yahei";
+	display: block;
+	height: 24px;
+	width: 128px;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom:7px;
+	text-align: center;
+	color: #474747;
+}
+.section-filer dl dd a:hover{
+	background: #ffa011;
+	border: 1px solid #ffa011;
+	border-radius: 4px;
+	color: #fff;
+	text-decoration: none;
+}
+.file-img{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../images/flie-img.png) no-repeat;
+	float: left;
+}
+.section-filer p{
+	width: 84px;
+	height: 40px;
+	float: left;
+	height: 40px;
+	overflow: hidden;
+	font: 14px/20px "microsoft yahei";
+	margin:0 10px;
+}
+.section-content .main{
+	width: 980px;
+	float: left;
+}
+.section-content .main img{
+	float: left;
+}
+.section-content .sider{
+	float: left;
+	width: 220px;
+	overflow: hidden;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.empty{
+	width: 218px;
+	height: 22px;
+	border-left: 1px solid #E5E5E5;
+	border-right: 1px solid #E5E5E5;
+}
+.brank{
+	border: 1px solid #E5E5E5;
+	border-top:none ;
+}
+.brank-title{
+	height: 30px;
+	border-bottom:1px solid #E5E5E5;
+	background: #f7f7f7;
+	text-align: center;
+	font: 16px/30px "microsoft yahei";
+}
+.brank-con{
+	height: 98px;
+	overflow: hidden;
+}
+.brank-con a{
+	display: block;
+	text-align: center;
+	*font-size:88px;
+	*font-family: Arial; 
+	height: 98px;
+	line-height: 98px;
+}
+.brank-con a img{
+	vertical-align: middle;
+}
+.main a{
+	display: block;
+	float: left;
+	width: 244px;
+	height: 324px;
+	position: relative;
+	border: 1px solid #e5e5e5;
+	margin: 0 -1px -1px 0;
+}
+.main a i{
+	display: block;
+	width: 240px;
+	height: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 2px;
+}
+.main a:hover i{
+	display: block;
+	width: 240px;
+	height: 320px;
+	border: 2px solid #0875F1;
+	padding: 0;
+}
+.click .alert{
+	display: block;
+}
+.alert{
+	width: 446px;
+	height: 296px;
+	position: fixed;
+	border: 1px solid #1c7eed;
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	z-index: 9998;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+}
+/*content---slection-----end*/
+/*mask*/
+.mask .ztip .btn a{
+	background: #0875f1;
+	border: 1px solid #0875f1;
+	color: #fff;
+	float: none;
+	margin: 0 auto;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>材多多手机客户端 for Android |材多多App|材多多客户端|免费下载</title>
+		<meta name="keywords" content="材多多客户端、材多多app、材多多移动客户端">
+			<link rel="stylesheet" type="text/css" href="css/cdd_down.css"/>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/is-css.css"/>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="fixed">
+			<div class="fixed-box">
+				<img src="img/cdd.png" width="150" height="150"/>
+			</div>
+			<span>扫码下载APP</span>
+		</div>
+		<div class="header-banner">
+			<div class="header">
+				<div class="warp1200 clearfix">
+					<h1 class="cdd-down-logo l">
+						<img src="img/cdd-logo.png"/>
+					</h1>
+					<ul class="header-list r">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">帮助中心</a></li>
+						<li>客服电话：400-968-5155</li>
+					</ul>
+				</div>
+			</div>
+			<div class="banner warp1200 clearfix">
+				<div class="iphone-bg l">
+					<div class="over" id="scrollPics">
+						<ul id="slider">
+							<li><img src="img/list.jpg"/></li>
+							<li><img src="img/list2.jpg"/></li>
+							<li><img src="img/list3.jpg"/></li>
+							<li><img src="img/list4.jpg"/></li>
+						</ul>
+					</div>
+				</div>
+				<div class="banner-text r">
+					<h3 class="">材多多客户端</h3>
+					<ul>
+						<li>买建材，随时随地上材多多客户端直达底价。</li>
+						<li>厂家直供、行业底价、极速配送、专属客服。</li>
+					</ul>
+					<div class="clearfix erweima-xiazai">
+						<div class="erweima l">
+							<img src="img/cdd_download.png"/>
+							<span>扫码下载Android版客户端</span>
+						</div>
+						<div class="xiazai r">
+							<a href="#" class="xiazai-btn">Android版下载</a>
+							<span>5月13日更新  正式版</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section warp1200">
+			<a href="javascript:void(0);" class="l circle circle-gary c1 circle1"></a>
+			<div class="r section-text">
+				<h4>厂家直供</h4>
+				<ul>
+					<li>材多多与众多国内一线建材厂商建立合作 </li>
+					<li>所有产品均从厂家直接供货。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section colorgary">
+			<div class="warp1200">
+				<div class="l section-text">
+					<h4>行业底价</h4>
+					<ul>
+						<li>材多多重建定价方式, </li>
+						<li>平台上销售的产品去除厂家所有运营成本，直达底价。</li>
+					</ul>
+				</div>
+				<a href="javascript:void(0);" class="r circle c2 circle2">
+				</a>
+			</div>
+		</div>
+		<div class="section warp1200">
+			<a href="javascript:void(0);" class="l circle circle-gary c1 circle3">
+			</a>
+			<div class="r section-text">
+				<h4>极速配送</h4>
+				<ul>
+					<li>材多多与国内顶级物流平台合作，</li>
+					<li>实现 全国订单智能分配</li>
+					<li>货物第一时间到用户手中。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section colorgary">
+			<div class="warp1200">
+				<div class="l section-text">
+					<h4>专属客服 </h4>
+					<ul>
+						<li>材多多全程客服跟随服务， </li>
+						<li>让用户在每一个环节都能享受最贴心的服务，</li>
+						<li>保护用户利益。</li>
+					</ul>
+				</div>
+				<a class="r circle c2 circle4">
+				</a>
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li><a href="#">关于我们</a>|</li>
+				<li><a href="#">联系我们</a>|</li>
+				<li><a href="#">常见问题</a>|</li>
+				<li><a href="#">隐私条款</a></li>
+			</ul>
+			<span>备案信息：Copyright © 材多多 www.cdd100.com 苏ICP备16005561号</span>
+		</div>
+		<script type="text/javascript">
+		!(function(){
+				var aImg=$("#slider>li");
+				var aImgWidth=aImg.width();
+				var index=0;
+				function rollTwo(){
+			      $("#slider").animate({marginLeft:"-"+aImgWidth+"px"},1000,"linear",function(){
+			        $("#slider").css({marginLeft:"0px"});
+			        $("#slider li:first").remove().clone(true).appendTo("#slider");
+			      })	
+			    }
+			    var startRollTwo=setInterval(rollTwo,2000);
+			})();
+		    var sec=$('.section .c1');
+		    var sec1=$('.section .c2')
+		    var screenH=$(window).height();
+		    function testbox(a){
+		    	if(a.offsetTop<$(document).scrollTop()+screenH&&(a.offsetTop+a.offsetHeight)>$(document).scrollTop()){
+		    		return true;
+		    	}else{
+		    		return false;
+		    	}
+		    }
+		    window.onscroll=function(){
+		    	if($(document).scrollTop()>sec[0].offsetTop){
+		    		$('.fixed').fadeIn('slow');
+		    	}else{
+		    		$('.fixed').fadeOut('slow');
+		    	}
+		   		for(var i=0;i<sec.length;i++){
+		   			if(testbox(sec[i])){
+		   					if(!sec.eq(i).hasClass('animation')){
+		   						sec.eq(i).addClass('animation');
+		   					}
+		   			}else{
+		   					sec.eq(i).removeClass('animation');
+		   			}
+		   		}
+		   		for(var i=0;i<sec1.length;i++){
+		   			if(testbox(sec1[i])){
+		   					if(!sec1.eq(i).hasClass('animation2')){
+		   						sec1.eq(i).addClass('animation2');
+		   					}
+		   			}else{
+		   					sec1.eq(i).removeClass('animation2');
+		   			}
+		   		}
+		    }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+/*最近浏览开始*/
+.visited{
+	width: 1198px;
+	margin: 0 auto 39px;
+	border: 1px solid #e5e5e5;
+}
+.visited .header{
+	background: #fff;
+	height: 42px;
+	font: 16px/42px "microsoft yahei";
+	font-weight: normal;
+	color: #474747;
+	padding: 5px 20px 0;
+	border-bottom: none;
+	z-index: 1;
+}
+.visited .visited-con{
+	height: 140px;
+	padding:0 39px 0 59px;
+}
+.visited .visited-con .list{
+	float: left;
+	width: 80px;
+	margin-right: 20px;
+}
+.visited .visited-con .list a{
+	display: block;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	display: table-cell;
+	vertical-align: middle; 
+	*display: block; 
+	*font-size:69px;
+	*font-family: Arial;
+}
+.visited .visited-con .list img{
+	vertical-align: middle;
+}
+.visited .visited-con .list .price{
+	color: #da0000;
+	margin-top: 8px;
+}
+.visited .visited-con .list p{
+	width: 80px;
+	font: 12px/18px Arial,Verdana,"宋体";
+	text-align: center;
+	color: #474747;
+}
+.visited .visited-con .list .name{
+	display: block;
+	width: 80px;
+	font: 12px/18px "宋体";
+	text-align: center;
+	color: #474747;
+	height: 18px;
+	overflow: hidden;
+}
+.visited .visited-con .list .name:hover{
+	text-decoration: underline;
+}
+/*最近浏览结束*/

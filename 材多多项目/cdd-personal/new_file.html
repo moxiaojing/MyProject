@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="uploadfile.php" enctype="multipart/form-data" method="post" target="iframeUpload">
+ 	<iframe name="iframeUpload" src="" width="350" height="35" frameborder=0 SCROLLING="no" style="display:NONE">
+	</iframe> 
+	<input id="test_file" name="test_file" id="fileId" type="file" onchange="selectFile(this)"> 
+	<input value="上传文件" type="submit"> 
+	</form>
+	<script type="text/javascript">
+	function selectFile(fnUpload) {
+		var filename = fnUpload.value; 
+	var mime = filename.toLowerCase().substr(filename.lastIndexOf(".")); 
+	if(mime!=".jpg") 
+	{ 
+	alert("请选择jpg格式的照片上传"); 
+	fnUpload.outerHTML=fnUpload.outerHTML; 
+	}
+	}
+</script>
+	</body>
+</html>

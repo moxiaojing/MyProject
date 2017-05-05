@@ -1,0 +1,34 @@
+$(function(){
+	$("#my-duoduo").hover(function(){
+		$(this).removeClass("my-duoduo");
+		$(this).addClass("my-duoduo-hover");
+	},function(){
+		$(this).addClass("my-duoduo");
+		$(this).removeClass("my-duoduo-hover");
+	})
+	$("#weixin").hover(function(){
+		$(this).addClass("hover");
+	},function(){
+		$(this).removeClass("hover");
+	})
+	$("#my-shopping-car").hover(function(){
+		$(this).removeClass("my-shopping");
+		$(this).addClass("my-shopping-hover")
+	},function(){
+		$(this).addClass("my-shopping");
+		$(this).removeClass("my-shopping-hover")
+	})
+	$("#fixed-nav>li").hover(function(){
+		$(this).addClass("hover");
+	},function(){
+		$(this).removeClass("hover");
+	})
+	$("#fixed-back").bind("click",function(){
+		$(this).addClass("click");
+	})
+	$("#nav-all").hover(function(){
+		$(this).addClass("hover")
+	},function(){
+		$(this).removeClass("hover")
+	})
+});

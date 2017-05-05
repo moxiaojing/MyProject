@@ -1,0 +1,52 @@
+.main-body .p-main .safe-con .con .listbody{ background: #F7F7F7;}
+.p-header{ position: relative; z-index: 2; zoom: 1;}
+.main-body{ background: #f8f8f8 url(../images/personal/sider-bg.png) repeat-y; position: relative;}
+.main-body .sider-border-bottom{ width: 220px; height: 1px; position: absolute; background: #e8e8e8; bottom: 0px; left: 0px;}
+.main-body .p-side{ padding: 1px; border: none; border-top: 1px solid #e8e8e8; background: none; margin-right: 0; height: 300px;}
+.main-body .p-main{ width: 960px;  padding: 10px 10px; min-height: 540px; background: #FFF;position: relative;zoom: 1;}
+.main-body .p-main .r-header{ background: #f7f7f7; border: 1px solid #e5e5e5; height: 16px; padding: 7px 10px; border-bottom: none; border-right: none; box-shadow: 1px 2px 1px #E5E5E5;margin: 0 0 10px 0;}
+.main-body .p-main .r-header h3{font-family: "microsoft yahei"; color: #474747;font-weight: normal;padding: 1px 10px;border-left: 2px solid #0875F1;}
+.tip{display:block;height:13px;font:12px/13px Tahoma,Helvetica,"宋体",san-serif;color:#e40011;padding: 26px 0 26px 20px;position: relative;zoom: 1;}
+.tip i{display: block;width: 13px;height: 13px; background: url(../images/personal/login-tip.png) no-repeat;position: absolute;left: 0px;top: 27px;}
+.main-body .p-main .form{padding: 0 0 0 190px;}
+.main-body .p-main .form .item{width: 688px;height: 22px;padding: 9px 0 9px 82px;position: relative;zoom: 1;}
+.main-body .p-main .form .item .title{position: absolute;left: 0px;top:9px;font: 12px/22px Tahoma,Helvetica,"宋体";color: #474747;}
+.main-body .p-main .form .item .text{font: 600 12px/22px Tahoma,Helvetica,"宋体";color: #474747;}
+.main-body .p-main .form .item .input{width: 149px;height: 14px;border: 1px solid #e5e5e5;padding: 3px 0 3px 9px;color: #474747;float: left;margin: 0 20px 0 0;}
+.main-body .p-main .form .item .input-tip{display:none;padding: 0 18px 0 26px;background: #fff8ce;height:20px;font: 12px/20px Tahoma,Helvetica,"宋体";float: left;border: 1px solid #ffe0b8;position: relative;zoom: 1;color: #7f7f7f;}
+.main-body .p-main .form .item .input-tip i{display: block;width: 13px;height: 13px;background: url(../images/personal/login-tip.png) no-repeat;position: absolute;top: 4px;left: 7px;}
+.main-body .p-main .form .submit{display: block;width: 158px;height: 36px;background: #0875f1;text-align: center;font: 14px/36px microsoft yahei;color: #fff;border-radius: 3px;margin: 9px 0 0 82px;}
+.main-body .p-main .tips{position:absolute;bottom:18px;left:20px;width: 878px; margin: 0 auto;background: #fff8ce;border: 1px solid #ffe0b8;padding: 15px 30px;height: 116px;}
+.main-body .p-main .tips .qustion{font: 14px/24px "microsoft yahei";color: #474747;position: relative;zoom: 1;}
+.main-body .p-main .tips .qustion i{display: block;width: 2px;height: 16px;background: #0875F1;position: absolute;top: 4px;left: -8px;}
+.main-body .p-main .tips .answer{font: 12px/20px Tahoma,Helvetica,"宋体";color: #686868;}
+
+/*账户安全*/
+.main-body .p-main .index-item{width: 940px;margin: 0 auto; border-bottom: 1px solid #e5e5e5;}
+.main-body .p-main .safe-con .con{height: 80px;padding: 24px 0 40px 42px;border-bottom:1px solid #f7f7f7;}
+.main-body .p-main .safe-con .con .list{height: 40px;font:12px/40px Tahoma,Helvetica,"宋体",san-serif;width: 774px;padding:0 0 0 90px;position: relative;zoom: 1;}
+.main-body .p-main .safe-con .con .list .safe-text{width: 507px;}
+.main-body .p-main .safe-con .con .list .title{width: 90px;position: absolute;top: 0px;left: 0px;color: #474747;}
+.main-body .p-main .safe-con .con .list .t-con{float: left;color: #e40011;}
+.main-body .p-main .safe-con .con .list .change{float: right;color: #686868;}
+.main-body .p-main .safe-con .con .list .change a{color: #5256f0;}
+.main-body .p-main .dang-tip .con{height: 64px;padding: 26px 10px;border-bottom: 1px solid #f7f7f7;}
+.main-body .p-main .dang-tip .con .title{display:block;font: 14px/24px "microsoft yahei";color: #606060;position: relative;zoom: 1;}
+.main-body .p-main .dang-tip .con .title i{width: 2px;height: 16px;display: block;background: #0875F1;position: absolute;top: 4px;left: -8px;}
+.main-body .p-main .dang-tip .con .content p{font: 12px/20px Tahoma,Helvetica,"宋体";color: #686868;}
+.main-body .p-main .normal-tip{border: none;}
+.main-body .p-main .normal-tip .con{border: none;}
+/*密码修改成功*/
+.main-body .p-main .succ-con{width: 340px;margin: 200px auto 0;font: 20px/50px "microsoft yahei";color: #177b15;position: relative;zoom: 1;}
+.main-body .p-main .succ-con i{display: block;width: 39px;height: 31px;background: url(../images/safe/change-sucess.png) no-repeat;position: absolute;top: 8px;left: -39px;}
+.main-body .p-main .succ-tip{font: 14px/20px "microsoft yahei";color: #1A1A1A;text-align: center;}
+.main-body .p-main .succ-tip a{color: #0875f1;text-decoration: underline;}
+/*修改手机号*/
+.ctel-tip{color: #7f7f7f;}
+.ctel-tip em{color: #e40011;}
+.main-body .p-main .form .item .tel-newtip{font: 12px/22px Tahoma,Helvetica,"宋体";color: #474747;}
+.main-body .p-main .form .item .vc{width: 49px;}
+.main-body .p-main .form .item .vc-btn{border:0px none;float: left;display: block;padding:0 8px;height: 26px;background: url(../images/safe/tel-button-bg.png) repeat-x; border-radius: 4px;font-family: Tahoma,Helvetica,"宋体";text-align: center;color: #fff;margin: -2px 20px 0 0;cursor: pointer;}
+.main-body .p-main .form .item .vcclick{width: 100px;background: #d3d3d3;border:1px solid #ececec;}
+/*手机号修改成功*/
+.main-body .p-main .ctel-succ-con{width: 360px;}

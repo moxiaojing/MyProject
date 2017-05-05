@@ -1,0 +1,486 @@
+/*alert开始*/
+.p-cancel .mask-con, .p-Goods .mask-con, .p-delete .mask-con{
+	display: block;
+}
+.p-cancel .cancel-order, .p-Goods .Goods-sure, .p-delete .delete-sure{
+	display: block;
+	background: #fff;
+}
+.cancel-order .alert-section{
+	width: 214px;
+	margin: 0 auto;
+	padding: 4px 0 0 0;
+}
+.cancel-order .alert-section .section-header{
+	font: 14px/40px microsoft yahei;
+	color: #535353;
+}
+.cancel-order .alert-section .select {
+	width: 186px;
+	height: 22px;
+	position: relative;
+	zoom: 1;
+	margin-bottom: 26px;
+}
+.cancel-order .alert-section .select .title{
+	width: 184px;
+	height: 20px;
+	display: block;
+	padding: 0 20px 0 10px;
+	border: 1px solid #e5e5e5;
+	font: 12px/20px "宋体";
+	position: relative;
+	zoom: 1;
+	color: #474747;
+}
+.cancel-order .alert-section .select .title i{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/my-order/order-alert-detail.png) no-repeat;
+	border: 1px solid #E5E5E5;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+.cancel-order .alert-section .btn{
+	padding-left: 4px;
+	width: 220px;
+}
+.cancel-order .alert-section .btn a{
+	display: block;
+	width: 98px;
+	height: 34px;
+	margin: 0 10px 30px 0;
+	background: #F7F7F7;
+	float: left;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	font: 14px/34px microsoft yahei;
+	text-align: center;
+	color: #474747;
+}
+.cancel-order .alert-section .click ul{
+	display: block;
+}
+.alert-section .select ul{
+	position: absolute;
+	width: 214px;
+	top: 22px;
+	border: 1px solid #E5E5E5;
+	border-top: none;
+	background: #fff;
+	display: none;
+}
+.cancel-order .alert-section .select ul li{
+	height: 20px;
+	font: 12px/20px "宋体";
+	color: #474747;
+	padding: 0 10px;
+}
+.cancel-order .alert-section .select ul li:hover{
+	background: #f7f7f7;
+}
+.cancel-order .alert-section .btn a:hover{
+	background: #0875F1;
+	border: 1px solid #0875F1;
+	color: #fff;
+}
+/*alert结束*/
+body{
+	background: #f7f7f7;
+}
+.main-body{
+	background: #fff;
+	box-shadow: 0 2px 1px #ededed;
+	padding:  0 0 6px 0;
+}
+.main-body .breadline .list{
+	float: left;
+}
+.main-body .breadline .list a{
+	color: #474747;
+}
+.main-body .breadline{
+	height: 54px;
+	font: 14px/54px Arial,microsoft yahei;
+	width: 1160px;
+	margin: 0 auto;
+	color: #474747;
+}
+.main-body .item{
+	width: 1160px;
+	margin: 0 auto 20px;
+}
+.main-body .logistics{
+	width: 1158px;
+	border: 1px solid #d7d7d7;
+	margin: 0 auto;
+	background: #edf4fb;
+}
+.main-body .logistics .lef{
+	width: 936px;
+	border-right: 1px solid #d7d7d7;
+	padding:0 0 0 10px;
+	float: left;
+}
+.main-body .logistics .lef .text{
+	height: 39px;
+	border-bottom: 1px solid #EDEDED;
+	font: 14px/39px "宋体";
+	color: #474747;
+}
+.main-body .logistics .lef .text .list{
+	float: left;
+	padding: 0 50px 0 0;
+}
+.main-body .logistics .lef .text .list em{
+	color: #474747;
+}
+.main-body .logistics .lef .text .num{
+	color: #ababab;
+}
+/*已发货，未发货jiaoyiguanbi*/
+.main-body .logistics .lef .text .list .no{
+	color: #e40011;
+}
+.main-body .logistics .lef .text .list .yes{
+	color: #0f781d;
+}
+.main-body .logistics .lef .text .list .off{
+	color: #ababab;
+}
+/*end*/
+.main-body .logistics .lef .text .rig-list{
+	float: right;
+}
+.main-body .logistics .lef .text .rig-list em{
+	padding:  0 10px 0 0;
+}
+/*物流信息*/
+.main-body .logistics .lef .logistics-information p{
+	font: 14px/54px "宋体";
+	color: #474747;
+}
+.main-body .logistics .lef .logistics-information p em{
+	color: #e40011;
+}
+/*右侧按键*/
+.main-body .logistics .rig{
+	width: 211px;
+	float: left;
+	height: 94px;
+	text-align: center;
+}
+.main-body .logistics .rig .btn{
+	display: inline-block;
+}
+.main-body .logistics .rig a{
+	font: 14px/94px microsoft yahei;
+	color: #474747;
+}
+.main-body .logistics .rig a:hover{
+	text-decoration: underline;
+}
+.main-body .logistics .rig .button{
+	width: 90px;
+	height: 26px;
+	display: inline-block;
+	float: left;
+	background: #0875F1;
+	border-radius: 3px;
+	color: #fff;
+	font: 14px/26px microsoft yahei;
+	text-align: center;
+	margin: 34px 14px 0 0;
+}
+.main-body .logistics .rig .button:hover{
+	text-decoration: none;
+}
+.main-body  .item .import-tip{
+	padding: 10px 0 0 0;
+	font-size: 12px;
+	color: #474747;
+	font-family: "宋体";
+}
+.main-body  .item .import-tip em{
+	color: #e40011;
+}
+/*订单状态*/
+ .order-state{
+	padding: 20px 0;
+	height: 33px;
+}
+ .order-state ul{
+	display: table;
+	margin: 0 auto;
+ }
+ .order-state ul li{
+ 	float: left;
+ }
+ .order-state ul li .imgs-tip{
+	height: 33px;
+	width: 140px;
+	background: #e7e7e7;
+	margin-right: 14px;
+	position: relative;
+	zoom: 1;
+}
+.order-state ul .complete .imgs-tip{
+	background: #0875F1;
+}
+.order-state ul li .imgs-tip i{
+	width: 10px;
+	height: 33px;
+	display: block;
+	position: absolute;
+}
+.order-state ul li .imgs-tip .lef{
+	background: url(../images/personal/order-state-1-2.png) no-repeat;
+	top: 0;
+	right: -10px;
+}
+.order-state ul .complete .imgs-tip .lef{
+	background: url(../images/personal/order-state-1.png) no-repeat;
+}
+ .order-state ul .complete .imgs-tip .rig{
+	background: url(../images/personal/order-state-2.png) no-repeat;
+}
+ .order-state ul li .imgs-tip .rig{
+	background: url(../images/personal/order-state-2-1.png) no-repeat;
+	top: 0;
+	left: -10px;
+}
+.order-state ul li .imgs-tip em{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #aeaeae;
+	font: 14px/20px "宋体";
+	text-align: center;
+	border-radius: 50%;
+	float: left;
+	margin: 7px 4px 0 18px;
+	color: #d2d2d2;
+	font-weight: 600;
+}
+.order-state ul .complete .imgs-tip em{
+	background: #fff;
+	color: #0875f1;
+}
+.order-state ul li span{
+	font: 14px/33px microsoft yahei;
+	color: #666666;
+	float: left;
+}
+.order-state ul .complete .imgs-tip span{
+	color: #fff;
+}
+.order-state ul .no-arrow .imgs-tip{
+	padding-left: 10px;
+}
+.order-state ul li .time{
+	display: block;
+	width: 150px;
+	height: 28px;
+	text-align: center;
+	margin: 0 0 0 -10px;
+}
+.order-state ul li .time em{
+	font: 12px/26px "宋体";
+	display: inline;
+}
+.order-state ul .no-arrow span{
+	margin: 0;
+}
+/*订单状态结束*/
+/*sclect开始*/
+.main-body .section{
+	width: 1158px;
+	border: 1px solid #E5E5E5;
+	margin: 0 auto 20px;
+} 
+.main-body .section .s-header{
+	padding: 0 10px;
+	height: 30px;
+	background: #f7f7f7;
+	font: 14px/30px microsoft yahei;	
+	border-bottom: 1px solid #E5E5E5;
+}
+.main-body .section .s-content {
+	padding: 0 10px;
+}
+/*.main-body .w-information .s-content .list{
+	height: 50px;
+	font: 12px/50px microsoft yahei;
+	margin-right: 90px;
+	color: #474747;
+}*/
+.w-information .t-li em{
+	width: 590px;
+	padding: 0 0 0 12px;
+}
+.w-information .w-ing{
+	color: #E40011;
+}
+.main-body .o-information .s-content{
+	padding: 0 10px;
+	color: #474747;
+}
+.main-body .section .s-content p{
+	float: left;
+}
+.pdt50{padding: 0 0 0 50px;}
+.main-body .o-information .s-content .list{
+	border-bottom: 1px solid #e5e5e5;
+	padding: 14px 0;
+}
+.main-body .o-information .s-content .last{
+	border: none;
+}
+.main-body .o-information .s-content .list .title{
+	font: 14px/30px microsoft yahei;
+	width: 180px;
+}
+.main-body .o-information .s-content .list .text .t-li{
+	display: block;
+	height: 30px;
+	font: 12px/30px microsoft yahei;
+}
+.main-body .o-information .s-content .list .text .t-li i{
+	display: block;
+	float: left;
+}
+.main-body .o-information .s-content .list .text .t-li em{
+	float: left;
+}
+/*select结束*/
+/*ttable*/
+.main-body .s-table{
+	width: 1160px;
+	margin: 0 auto 20px;
+	border-top: 1px solid #E5E5E5;
+}
+.main-body .s-table .t-header{
+	padding: 0 11px;
+}
+.main-body .s-table h3{
+	font-weight: normal;
+	font-family: microsoft yahei;
+	font-size: 14px;
+	line-height: 20px;
+	color: #474747;
+}
+.main-body .s-table .t-header .company-tip{
+	height: 22px;
+	padding: 12px 0;
+}
+.main-body .s-table .t-header .company-tip span{
+	float: left;
+	font: 12px/22px "宋体";
+	color: #474747;
+}
+.main-body .s-table .t-header .company-tip .tip{
+	display: block;
+	width: 63px;
+	height: 22px;
+	background: #e40011;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	margin: 0 10px;
+	cursor: pointer;
+	float: left;
+	line-height: 22px;
+}
+.main-body .s-table .table{
+	width: 1160px;
+	border-collapse: collapse;
+	margin: 0 0 10px;
+}
+.main-body .s-table .table tr th, .main-body .s-table .table tr td{
+	border: 1px solid #e5e5e5;
+	height: 30px;
+	text-align: center;
+	color: #474747;
+}
+.main-body .s-table .table tr th{
+	background: #f7f7f7;
+	font-family: "宋体";
+	font-size: 14px;
+	color: #474747;
+}
+.main-body .s-table .table tr td em{
+	font-family: Verdana;
+}
+.main-body .s-table .table tr .cell1{
+	width: 180px;
+}
+.main-body .s-table .table tr .cell2{
+	width:204px;
+}
+.main-body .s-table .table tr .cell3{
+	width: 307px;
+}
+.main-body .s-table .table tr .cell4{
+	width: 133px;
+}
+.main-body .s-table .table tr .cell5{
+	width: 123px;
+}
+.main-body .s-table .o-detail h3{
+	line-height: 20px;
+	padding: 0 0 0 11px;
+	color: #484848;
+}
+.main-body .s-table .o-detail{
+	width: 100%;
+}
+.main-body .s-table .o-detail .nohave{
+	color: #ababab;
+}
+.main-body .s-table .o-detail .text{
+	width: 1000px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 20px;
+	text-indent: 20px;
+}
+/*table*/
+/*pay-money*/
+.pay-money{
+	width: 1160px;
+	margin: 0 auto;
+	text-align: right;
+}
+.pay-money .content{
+	width: 294px;
+	float: right;
+	font: 12px/18px "宋体";
+	padding: 0 20px 0 0;
+}
+.pay-money .list .title{
+	float: left;
+	display: block;
+	width: 200px;
+}
+.pay-money .list .money{
+	font-family: Verdana;
+	float: left;
+	display: block;
+	width: 94px;
+}
+.pay-money  .sum .title, .pay-money .sum .money{
+	font: 600 18px/55px microsoft yahei;
+}
+.pay-money  .sum .title{
+	color: #1a1a1a;
+}
+.pay-money  .sum .money{
+	color: #e40011;
+}
+.order-title{
+	padding-left: 31px;
+	font:600 16px/30px microsoft yahei;
+}
+/*pay-moneyend*/
