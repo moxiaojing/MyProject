@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<script src="template-native.js"></script>
+		<script src="jq3.js"></script>
+		<script type="text/html" id="test">
+			<ul>
+				<% for(var i=0;i<count;i++){ %>
+					<%if(books[i]){%>
+						<li>
+							<header class="list_head"><%=books[i].title%></header>
+							<img class="img" src=<%=books[i].image%> />
+							<div class="img_font">
+								<div class="chubanshe"><%=books[i].publisher%></div>
+								<div class="jeishao"><%=books[i].summary.substr(0,50)+'...'%></div>
+							</div>
+						</li>	
+					<%}%>
+				<%}%>
+			</ul>
+			
+		</script>
+		<script>
+			//获取到数据后做一些事情
+			function fn(data){
+				$(".foot").show();
+				var oList = document.getElementById("list");
+				//获取总页数
+				var allpage = Math.ceil(data.total/num);
+				console.log(data);
+				var html = template("test",data);
+				oList.innerHTML = html;
+				$('#wait').hide();
+				$(".num span").eq(0).html(data.total);
+				$(".num span").eq(1).html(Math.ceil(data.total/num));
+				$(".num span").eq(2).html(Math.ceil(data.start/2)+1);
+				//如果总页数小于5张时，让大于总页数的页码都消失
+				if(allpage<5){
+					for(var i=4;i>allpage-1;i--){
+						$("#page span").eq(i).hide();
+					}
+				}else{
+					//否则让所有的页码都出现
+					for(var i=0;i<5;i++){
+						$("#page span").eq(i).show();
+					}
+				}
+				
+				
+				//点击第一页时发生一些事情
+				$("#first").click(function(){
+					start = 0;
+					nowpage = 1;
+					var script = document.createElement("script");
+					$("#page span").removeClass("red");
+					$('#wait').show();
+					script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count=2&callback=fn&start='+start
+					document.body.appendChild(script)
+					$("#first").off('click')
+					document.body.removeChild(script);
+					page(pages,1,allpage);
+				});
+				//点击最后一页时发生一些事情
+				$("#last").click(function(){
+					start = Math.ceil(data.total/data.count-1)*2;
+					nowPage = Math.ceil(start/2)+1;
+					var script = document.createElement("script");
+					$('#wait').show();
+					$("#page span").removeClass("red");
+					script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count=2&callback=fn&start='+start
+					document.body.appendChild(script)
+					$("#last").off('click')
+					document.body.removeChild(script);
+					page(pages,allpage,allpage);
+				});
+				//点击页数时发生一些事情
+				$("#page span").click(function(){
+					nowPage = this.innerHTML;
+					start = (nowPage-1)*2;
+					var script = document.createElement("script");
+					script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count=2&callback=fn&start='+start
+					document.body.appendChild(script)
+					$("#page span").removeClass("red");
+					$("#page span").off('click')
+					page(pages,nowPage,allpage)
+					document.body.removeChild(script);
+				});
+				//点击上一页时发生一些事情
+				prev.onclick = function(){
+//				$("#prev").on("click",function(){
+					console.log(2)
+					//如果点击下一页时的页码小于第一页，则跳出函数，不做事情
+					if(nowPage<=0){
+						return;
+					}else{
+						nowPage--;
+					}
+					start = (nowPage-1)*2;
+					$("#page span").removeClass("red");
+					var script = document.createElement("script");
+					script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count='+ num +'&callback=fn&start='+start
+					document.body.appendChild(script)
+					page(pages,nowPage,Math.ceil(data.total/data.count));
+					document.body.removeChild(script);
+					$("#prev").off("click");
+//				})
+				}
+//				$("#next").on("click",function(){
+				next.onclick = function(){
+					console.log(1)
+					//如果点击下一页时的页码等于最后一页，则跳出函数，不做事情
+					if(nowPage>=Math.ceil(data.total/data.count)){
+						return;
+					}else{
+						nowPage++;
+					}
+					start = (nowPage-1)*2;
+					$("#page span").removeClass("red");
+					var script = document.createElement("script");
+					script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count='+ num +'&callback=fn&start='+start
+					document.body.appendChild(script)
+					page(pages,nowPage,Math.ceil(data.total/data.count));
+					document.body.removeChild(script);
+					$("#next").off("click");
+//				})
+				}
+				
+				//改变页数的函数
+				function page(element,nowPage,allPage){
+					var span = pages.getElementsByTagName('span');
+					if(nowPage>allPage){
+						return;
+					}
+					if(allPage<=5){
+						for(var i=1;i<=5;i++){
+							span[i-1].setAttribute('data-id',i);
+							if(span[i-1].dataset.id==nowPage){
+								span[i-1].className = 'red';
+							}
+						}
+					}else{
+						for(var i=1;i<=5;i++){
+							//如果点击的是前两页的话只改变颜色
+							if(nowPage<=2){
+								span[i-1].innerHTML = i;
+								span[i-1].setAttribute('data-id',i);
+								if(span[i-1].dataset.id==nowPage){
+									span[i-1].className = 'red';
+								}
+							}else if((allPage-nowPage)==1||(allPage-nowPage)==0){
+								//如果点击的是最后两页的话让最后五页的页数显示出来
+								span[i-1].innerHTML = allPage-5+i;
+								span[i-1].setAttribute('data-id',allPage-5+i);
+								//加红色
+								if(span[i-1].dataset.id==nowPage){
+									span[i-1].className = 'red';
+								}
+							}else{
+								//点击其他页数的情况，把页数放在中间，前面为当前页-1，-2，后面为
+								//页数+1,+2,然后把当前页变为红色
+								span[i-1].innerHTML = nowPage-3+i;
+								span[i-1].setAttribute('data-id',nowPage-3+i);
+								if(span[i-1].dataset.id==nowPage){
+									span[i-1].className = 'red';
+								}
+							}
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="box">
+				<header class="head">
+					<input type="text" id="text" />
+					<div id="btn">搜索相关书籍</div>
+				</header>
+				<div id="content">
+					<div id="wait">正在搜索中......，请稍后</div>
+					<div class="num">共搜索到<span>*</span>条数据，共<span>*</span>页，第<span>*</span>页</div>
+					<ul id="list">
+						<!--<li>
+							<header class="list_head">JavaScript</header>
+							<img class="img" src="images/book.png"/>
+							<div class="img_font">
+								<div class="chubanshe">克罗即可福特/东南大学出版社</div>
+								<div class="jeishao">阿斯达舒服撒发发放阿斯达放阿斯达舒服撒发放阿斯达舒服撒发放阿斯达舒服撒发放</div>
+							</div>
+						</li>
+						<li>
+							<header class="list_head">JavaScript</header>
+							<img class="img" src="images/book.png"/>
+							<div class="img_font">
+								<div class="chubanshe">克罗即可福特/东南大学出版社</div>
+								<div class="jeishao">阿斯达舒服撒发发放阿斯达放阿斯达舒服撒发放阿斯达舒服撒发放阿斯达舒服撒发放</div>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+				<footer class="foot">
+					<span id="first">首页</span>
+					<span id="prev">上一页</span>
+					<span id="page">
+						<span class="red">1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+					</span>
+					<span id="next">下一页</span>
+					<span id="last">尾页</span>
+				</footer>
+			</div>
+		</div>
+		<script>
+			var oText = document.getElementById("text");
+			var num = 2;
+			var start = 0;
+			var pages = document.getElementById("page");
+			var nowPage = 1;
+			
+			$(".foot").hide();
+			$("#btn").click(function(){
+				var script = document.createElement("script");
+//				console.log(oText.value)
+				$('#wait').show();
+				script.src = 'https://api.douban.com/v2/book/search?q='+oText.value+'&count='+ num +'&callback=fn&start='+start
+				document.body.appendChild(script);
+				document.body.removeChild(script);
+			})
+		</script>
+	</body>
+</html>

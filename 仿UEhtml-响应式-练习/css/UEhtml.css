@@ -54,7 +54,7 @@ body .fr{
 .SideBar a:nth-of-type(1){
 	/*background: #c1c1c1;*/
 	background: rgba(0,0,0,.2);
-	width:40px;
+	width:100%;
 	height:29px;
 	padding-top:11px;
 	/*margin-bottom:1px;*/
@@ -68,7 +68,7 @@ body .fr{
 .SideBar a:nth-of-type(2){
 	/*background: #7f7f7f;*/
 	background-color: rgba(51,51,51,.6);
-	width:40px;
+	width:100%;
 	height:36px;
 	padding-top:14px;
 	margin-top:1px;
@@ -184,7 +184,7 @@ body .fr{
 	display: none;
 }
 .nav_olist li{
-	width:100px;
+	width:100%;
 	height:40px;
 	line-height: 40px;
 	text-align: center;
@@ -193,7 +193,7 @@ body .fr{
 .nav_olist li a{
 	display: block;
 	height: 40px;
-	width:100px;
+	width:100%;
 	color:#555;
 }
 /*.nav_olist li a:hover{
@@ -359,16 +359,6 @@ body .fr{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -670,15 +660,65 @@ body .fr{
 
 
 
+@media only screen and (min-width: 1480px){
+	.CS{
+		width: 1480px;
+	}
+}
+
+@media only screen and (min-width: 1180px) and (max-width: 1479px){
+	.CS{
+		width: 1180px;
+	}
+}
+
+@media only all and (max-width:1179px){
+	
+	.top_wrap_navl{
+		display:none;
+	}
+	.nav_openbtn{
+		display:inline-block;
+	}
+	.some_news{
+		display:hidden;
+	}
+	.recommend_box{
+		display: none;
+	}
+	/*.recommend_box .samebox{
+		float:none;
+		display: block;
+		margin-bottom:10px;
+	}*/
+	.adboss_list li:nth-of-type(4),.adboss_list li:nth-of-type(8){
+		margin-right:0;
+	}
+}
+@media only all and (min-width: 880px) and (max-width: 1179px){
+	.CS{
+		width:880px;
+	}
+	
+}
+@media only all and (min-width: 600px) and (max-width: 879px){
+	.CS{
+		width:580px;
+	}
+}
+/*@media only screen and (max-width: 399px) {
+	.CS{
+		width: 320px;
+		height: 50px;
+		background: #E188C0;
+	}
+}*/
 
 
 
 
 
-
-
-
-@media only all and (max-width:1250px){
+/*@media only all and (max-width:1250px){
 	.CS{
 		width:880px;
 	}
@@ -691,9 +731,7 @@ body .fr{
 	.some_news{
 		display:hidden;
 	}
-	/*.recommend_box{
-		display: none;
-	}*/
+	
 	.recommend_box .samebox{
 		float:none;
 		display: block;
@@ -710,4 +748,6 @@ body .fr{
 	.adboss_list li:nth-of-type(4),.adboss_list li:nth-of-type(8){
 		margin-right:0;
 	}
-}
+}*/
+
+
