@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		<script src="js/data.js"></script>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/template-native.js"></script>
+		<script src="js/tools.js"></script>
+		<script>
+			var dpr = 1 / window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width,user-scalable=no,,initial-scale='+dpr+',minimum-scale='+dpr+',maximum-scale='+dpr+'" />');
+			
+			var fz = document.documentElement.clientWidth / 50;
+			
+			document.getElementsByTagName('html')[0].style.fontSize = fz + 'px';
+			
+			document.addEventListener('touchstart',function(ev){
+				
+			   if( ev.cancelable ){
+			   	
+			   		ev.preventDefault();
+			   }
+			   
+			},{passive:false});
+
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<header class="head_state">
+				<div class="head_signal" >
+					<span class="head_signal_num"></span>
+					<span class="head_signal_num"></span>
+					<span class="head_signal_num"></span>
+					<span class="head_signal_num"></span>
+					<span class="head_signal_num"></span>
+					<span>中国移动</span>
+				</div>
+				<div class="head_time" >16:50</div>
+				<div class="head_power" >
+					<span>100%</span>
+					<span class="head_power_ico" ></span>
+				</div>
+			</header>
+			<section class="content">
+				<div class="lockScreen">
+					<div class="lockS_time">
+						<h2>16:50</h2>
+						<div>4月14日 星期五</div>
+					</div>
+					<div class="lockS_open">&gt;&gt;滑动来解锁 </div>
+				</div>
+				<div class="con_app">
+					<!--<ul class="con_apps_page">
+						<li>
+							<img src="img/photo01.png" alt="" />
+							<span>信息</span>
+						</li>
+						<li>
+							<img src="img/rl.png" alt="" />
+							<span>日历</span>
+						</li>
+						<li>
+							<img src="img/QQmusic.png" alt="" />
+							<span>QQ音乐</span>
+						</li>
+					</ul>-->
+					<!--<ul class="con_apps_page">
+						<li>
+							<img src="img/photo01.png" alt="" />
+							<span>信息</span>
+						</li>
+					</ul>
+					<ul class="con_apps_page">
+						<li>
+							<img src="img/photo01.png" alt="" />
+							<span>信息</span>
+						</li>
+					</ul>-->
+				</div>
+				<div class="con_fixed">
+					<div class="con_page_ico">
+						<!--<span></span>
+						<span></span>
+						<span></span>-->
+					</div>
+					<ul class="con_foot">
+						<li class="app">
+							<div></div>
+							<span>信息</span>
+						</li>
+						<li class="app">
+							<div></div>
+							<span>相册</span>
+						</li>
+						<li class="app">
+							<div></div>
+							<span>相机</span>
+						</li>
+						<li class="app">
+							<div></div>
+							<span>计算器</span>
+						</li>
+					</ul>
+				</div>
+				<div class="app_open">
+					<p>app正在建设中...</p>
+					<span class="glyphicon glyphicon-home _home"></span>
+				</div>
+				<div class="photo_open">
+					<ul class="photo_wrap" >
+						
+					</ul>
+					<span class="glyphicon glyphicon-home _home"></span>	
+					
+					<div class="bigImg_open">
+						<ul class="bigImg_wrap">	
+							
+						</ul>
+					</div>
+					
+					<div class="photo_titie">
+						<span class="del_ico glyphicon glyphicon-trash" ></span>
+						<span class="back glyphicon glyphicon-chevron-left" ></span>
+						<p>已选择0项</p>
+						<span class="sel" data-onoff = "false" >选择</span>
+					</div>
+				</div>
+			</section>
+						
+			<div class="head_sider"></div>
+			<div class="foot_sider"></div>
+			
+			<div class="head_sidebar">
+				<div class="head_sidebar_info">
+					<!--<div class="head_sidebar_search">
+						<input type="text" placeholder="搜索" />
+						<span></span>						
+					</div>-->
+					<div class="head_sidebar_title">
+						<span class="active">今天</span>
+						<span>全部</span>
+					</div>
+					<ul>
+						<li class="head_sidebar_noinfo" >没有通知</li>
+					</ul>
+				</div>
+				<div class="head_sidebar_back" ></div>
+			</div>
+			<div class="foot_sidebar">
+				<div class="close glyphicon glyphicon-minus"></div>
+				<ul class="foot_sidebar_items" >
+					<li>
+						<span class="glyphicon glyphicon-plane" ></span>
+						
+					</li>
+					<li class="active">
+						<span class="glyphicon glyphicon-volume-off" ></span>
+					</li>
+					<li class="active" >
+						<span class="glyphicon glyphicon-sort" ></span>
+					</li>
+					<li>
+						<span class="glyphicon glyphicon-cog" ></span>
+					</li>
+					<li>
+						<span class="glyphicon glyphicon-camera" ></span>
+					</li>
+				</ul>
+				<div class="foot_sidebar_lighter" >
+					<span class="low glyphicon glyphicon-asterisk" ></span>
+					<div class="line" >
+						<span class="line_active" ></span>
+						<span class="line_btn" ></span>
+					</div>
+					<span class="high glyphicon glyphicon-asterisk"></span>
+				</div>
+			</div>
+			
+			<div id="mask"></div>
+		</div>
+		<!--模板引擎，生成app页面-->
+		<script type="text/html" id="apps_pageHTML">
+			<%for (var i=0; i<data.length; i++) { %>
+				
+				<ul class="con_apps_page" data-page = <%= data[i].page %> >
+					<% for( var j=0; j<data[i].apps.length; j++ ){ %>
+						<li class="app" data-index = <%= data[i].apps[j].index %> data-candel = <%= data[i].apps[j].canDel %> >
+						<img src=<%= data[i].apps[j].src %> alt="" />
+						<span class="app_title"><%= data[i].apps[j].title %></span>
+						<% if( data[i].apps[j].canDel === "true" ){ %>
+							<em class="con_apps_del glyphicon glyphicon-remove" ></em>
+						<% } %>
+					</li>
+					<%}%>
+				</ul>
+			<%}%>
+		</script>
+		
+		
+		<!--模板引擎，生成相册app图片页面-->
+		<script type="text/html" id="photo_pageHTML">
+			<% for( var i=0; i<photosData.length; i++ ){ %>
+				<li class="img_box" data-index=<%= i %> >
+					<img src=<%= photosData[i] %> alt="" />
+				</li>
+			<%}%>
+		</script>
+		
+		
+			<!--渲染页面-->
+		<script src="js/renderHtml.js"></script>
+			<!-- 可自定义的弹框封装 -->
+		<script src="js/dialog.js" ></script>
+				<!-- isScroll -->
+		<script src="js/iscroll.js" > </script>
+			<!-- 主要交互 -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
