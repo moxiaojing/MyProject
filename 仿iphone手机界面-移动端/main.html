@@ -125,10 +125,12 @@
 					</div>
 					
 					<div class="photo_titie">
-						<span class="del_ico glyphicon glyphicon-trash" ></span>
+						<div class="photo_titie_sel">
+							<span class="del_ico glyphicon glyphicon-trash" ></span>
+							<p>已选择 <span>0</span> 项</p>
+							<span class="sel" data-onoff = "false" >选择</span>
+						</div>
 						<span class="back glyphicon glyphicon-chevron-left" ></span>
-						<p>已选择0项</p>
-						<span class="sel" data-onoff = "false" >选择</span>
 					</div>
 				</div>
 			</section>
@@ -208,6 +210,9 @@
 			<% for( var i=0; i<photosData.length; i++ ){ %>
 				<li class="img_box" data-index=<%= i %> >
 					<img src=<%= photosData[i] %> alt="" />
+					<div class= "photo_mask">
+						<span class="photo_isSel glyphicon glyphicon-ok" ></span>
+					</div>
 				</li>
 			<%}%>
 		</script>

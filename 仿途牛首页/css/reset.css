@@ -1,0 +1,25 @@
+body, h1, h2, h3, h4, h5, h6, dd, dl, p{
+	margin:0;
+}
+a{
+	text-decoration: none;
+	font-size:12px;
+	color:#999;
+}
+img{
+	border:none;
+	vertical-align: top;
+}
+ul, ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+form{
+	margin:0;
+	padding:0;
+}
+input{
+	padding:0;
+	border:none;
+}

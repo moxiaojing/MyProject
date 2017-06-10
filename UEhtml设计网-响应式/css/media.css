@@ -1,0 +1,8 @@
+@media only all and (max-width:1250px) and (min-width:880px){
+	.CS{
+		width:880px;
+	}
+	.top_wrap_navl{
+		display:none;
+	}
+}

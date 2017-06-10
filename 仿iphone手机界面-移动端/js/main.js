@@ -958,10 +958,22 @@ $(".bigImg_wrap").css("width", photosData.length*dw + "vw");
 			
 			if( time < 500 ){
 				if( text === "相册" ){
-					//显示图片模板
+					//显示图片模板,默认状态
 					$(".photo_open").css("transform","scale(1)");
-
-					//上下滚动模块，相册图片上下滑动
+					
+					$(".photo_titie .del_ico").hide();
+					
+					$(".photo_titie p").hide();
+					
+					$(".photo_titie .sel").html("选择");
+					
+					$(".photo_titie .sel").data("onoff",false);
+					
+					$(".photo_wrap li").removeClass("active");
+					
+					$(".photo_wrap li .photo_mask").hide();
+					
+					//上下滚动模块，相册图片纵向滑动
 					new IScroll(".photo_open",{});
 
 				}else{
@@ -1001,7 +1013,11 @@ $(".bigImg_wrap").css("width", photosData.length*dw + "vw");
 //相册事件
 ;(function(){
 	
-	var isMove;
+	var index;//记录点击目标的索引值
+	var isDel = true;
+	var isMove,
+		selLi_len,
+		selLis;
 	
 	$(".photo_open .photo_wrap").on("touchstart",function(event){
 		
@@ -1023,9 +1039,11 @@ $(".bigImg_wrap").css("width", photosData.length*dw + "vw");
 	$(".photo_open .photo_wrap").on("touchend",function(event){
 		
 		var target = event.target;
-		
-		var ev = event.changedTouches[0];
 				
+		var ev = event.changedTouches[0];
+		//是否点击选择按钮，代表是否选中图片
+		var bl = $(".photo_titie .sel").data("onoff");
+		
 		if( isMove ){
 			
 			return;
@@ -1043,41 +1061,246 @@ $(".bigImg_wrap").css("width", photosData.length*dw + "vw");
 				return;
 			}
 		}
-		
-		var index;//记录点击目标的索引值
-		
+		//确定点击的索引值
 		index = $(target).index();
 		
-		$(".bigImg_wrap").data("currentIndex",index);
-				
-		$(".bigImg_wrap").css({
-			"transform":"scale(1)",
-			"transform":"translateX("+ -index*dw +"px)"
-			
-		});
+//		console.log(bl);
 		
-		$(".bigImg_wrap img").removeClass("active");
+		if( bl ){
 			
-		$(".bigImg_wrap img").eq(index).addClass("active");
-		
-		setTimeout(function(){
+			$(target).toggleClass("active");
+
+			$(".photo_mask").eq(index).toggle();
+			
+			selLi_len = $(this).find("li.active").length;
+			
+			$(".photo_titie p span").html(selLi_len);
+			
+		}else{//显示照片大图			
+			
+			$(".bigImg_wrap").data("currentIndex",index);
+					
+			$(".bigImg_wrap").css({
+				"transform":"scale(1)",
+				"transform":"translateX("+ -index*dw +"px)"
 				
+			});
+			
+			$(".bigImg_wrap img").removeClass("active");
+				
+			$(".bigImg_wrap img").eq(index).addClass("active");
+			
+			setTimeout(function(){
+					
 				$(".bigImg_open").css({
 				
 					"transform":"scale(1)",
 					
 					"-webkit-transform":"scale(1)"
-				});
+				})				
 				
 			},0);
-		
-		
+			//切换title内容
+			$(".photo_titie .back").show();
+			
+			$(".photo_titie_sel").hide();
+			
+//			$(".photo_titie .sel").hide();
+//			
+//			$(".photo_titie .del_ico").hide();
+//			
+//			$(".photo_titie p").hide();
+			
+		}
 		
 	})
+		
+	//点击选择图片效果	
+	$(".photo_titie .sel").on("touchend",function(event){
+		
+		var ev = event.changedTouches[0];
+		
+		if($(this).data("onoff")){
+			
+			$(this).html("选择");
+			
+			$(".photo_titie .del_ico").hide();
+			
+			$(".photo_titie p span").html(0);
+			
+			$(".photo_titie p").hide();
+			
+			$(this).data("onoff",false);
+			
+		}else{
+			
+		
+			$(this).html("取消");
+			
+			$(".photo_titie .del_ico").show();
+			
+			$(".photo_titie p").show();
+			
+			
+			$(this).data("onoff",true);
+			
+		}	
+		//如果点击的是 取消 两个字
+		if( !$(this).data("onoff") ){
+			
+			$(".photo_wrap li").removeClass("active");
+			
+			$(".photo_wrap .photo_mask").hide();
+			
+		}
+		
+	})
+	
+	//删除图片
+	$(".photo_titie .del_ico").on("touchstart",function(event){
+		
+		var ev = event.changedTouches[0];
+	
+	})
+	
+	$(".photo_titie .del_ico").on("touchmove",function(event){
+		
+		var ev = event.changedTouches[0];
+		
+		isDel = false;
+		
+	})
+	
+	$(".photo_titie .del_ico").on("touchend",function(event){
+		
+		var ev = event.changedTouches[0];
+		
+		if(!isDel){
+			
+			isDel = true;
+			
+		}else{
+			//如果没有选中照片，就直接return
+			if(!selLi_len){
+				
+				return;
+				
+			}
+			
+			$("#mask").show();
+			
+			new Dialog({
+				
+				title:"删除"+ selLi_len +"张照片",
+		
+				content:"删除后，将无法恢复",
+				//确认 删除 图片
+				ok:function(){
+					//找到选中的图片的index，放到数组里	
+					selLis = $(".photo_wrap li.active").map(function( index, item ){
+						
+						return $(item).index();
+						
+					})
+					//将selLis从大到小排序
+					selLis.sort(function( a , b ){
+						
+						return b - a;
+						
+					})
+					
+					for( var i=0; i < selLis.length; i++ ){
+						
+						photosData.splice(selLis[i],1);//去掉选中的img图片地址
+						
+					}
+					
+					//重新渲染图片页面
+					var objImgs = {photosData:photosData};
+
+					$(".photo_wrap").html(template('photo_pageHTML', objImgs));
+					
+					//渲染大图页面
+					var imgStr = "";
+
+					for( var i = 0; i < photosData.length; i++){
+						
+						imgStr +="<li><img src='"+ photosData[i] +"' /></li>"
+						
+					}
+					
+					$(".bigImg_wrap").html(imgStr);
+					
+					$("#mask").hide();
+										
+					$(".dialog").remove();
+					
+					selLi_len = 0;
+					
+					$(".photo_titie p span").html(selLi_len);
+					
+				},
+				
+				cancel:function(){
+					//遮罩层消失
+					$("#mask").hide();
+					//弹框移除
+					$(".dialog").remove();
+					
+				}
+				
+			})
+			
+		}
+		
+	})
+	
+	//点击返回按钮，返回到小图状态
+	$(".photo_titie .back").on("touchend",function(event){
+		
+		var ev = event.changedTouches[0];
+		
+		$(".bigImg_wrap").data("currentIndex",null);
+					
+		$(".bigImg_wrap").css({
+			
+			"transform":"scale(0)",
+			"-webkit-transform":"scale(0)"
+			
+		})
+		
+		$(".bigImg_open").css({
+			
+			"transform":"scale(0)",
+			"-webkit-transform":"scale(0)"
+			
+		})
+		$(this).hide();
+		$(".photo_titie_sel").show();
+	})
+	
+	
+
 })()
 
+//点击大图横向切换
+;(function(){
+	
+	$(".bigImg_wrap").on("touchstart",function(){
+		var ev = event.changedTouches[0];
+	})
 
+	$(".bigImg_wrap").on("touchstart",function(){
+		var ev = event.changedTouches[0];
+//		new IScroll(".bigImg_open",{});
+	})
 
+	$(".bigImg_wrap").on("touchstart",function(){
+		var ev = event.changedTouches[0];
+		
+	})
+	
+})()
 
 
 

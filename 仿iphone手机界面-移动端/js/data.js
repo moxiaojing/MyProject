@@ -38,7 +38,7 @@ var data = [
 		}		
 	];
 
-var photosData = ["img/photo/img051.jpg","img/photo/img052.jpg","img/photo/img053.jpg","img/photo/img054.jpg","img/photo/img055.jpg","img/photo/img056.jpg","img/photo/img057.jpg","img/photo/img058.jpg","img/photo/img01.jpg","img/photo/img03.jpg","img/photo/img051.jpg","img/photo/img052.jpg","img/photo/img053.jpg","img/photo/img054.jpg","img/photo/img051.jpg","img/photo/img052.jpg","img/photo/img053.jpg","img/photo/img054.jpg","img/photo/img055.jpg","img/photo/img056.jpg","img/photo/img057.jpg","img/photo/img058.jpg"];
+var photosData = ["img/photo/img051.jpg","img/photo/img052.jpg","img/photo/img053.jpg","img/photo/img054.jpg","img/photo/img055.jpg","img/photo/img056.jpg","img/photo/img057.jpg","img/photo/img058.jpg","img/photo/img01.jpg"];
 
 var musicData = [
 
