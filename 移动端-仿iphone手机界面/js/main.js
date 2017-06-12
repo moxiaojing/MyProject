@@ -1,6 +1,6 @@
 var islock = true;//表示锁屏状态
 var imgScroll;//图片list的滑动
-var BigImgScroll;//大图的滑动
+var BigImgSwiper;//大图的滑动
 var dh = document.documentElement.clientHeight; //可视区高度
 var dw = document.documentElement.clientWidth; //可视区宽度
 
@@ -1288,85 +1288,30 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 		$(this).hide();
 		$(".photo_titie_sel").show();
 	})
-
-//点击大图横向切换
-	                      
-		//大图的滚动效果
-	function loaded(){ 
-		
-		BigImgScroll = new IScroll(".bigImg_open",{  
-		
-			probeType: 2,//运动速度
-			
-			hScroll :true, //横向滚动   
-			
-			vScroll:false,//禁止竖向滚动        
-			
-			bindToWrapper:true,//光标、触摸超出容器时，是否停止滚动
-			
-	        scrollX:true, //
-	        
-	        vScrollbar: false,//滚动条设置为隐
-	        
-	        fixedScrollbar:true,//当元素拖动超出了scroller的边界时，滚动条会收缩 
-	        
-	        snap: ".bigImg_wrap li"//此处为true ,表示根据容器尺寸自动分割，如果写元素表示根据元素分割
-	        
-	        
-		});
-		
-		BigImgScroll.on("beforeScrollStart",function(event){
 	
-			BigImgScroll.currentPage = index;
-//			BigImgScroll.refresh(); //刷新
-			console.log(BigImgScroll.currentPage);
+	//点击大图横向切换
+	$(document).ready(function () {	
+		
+		var BigImgSwiper = new Swiper(".swiper-container",{
+			
+			initialSlide:index, //设置初始值
+			
+			direction:"horizontal",//默认水平移动,vertical表示垂直方向
+			
+			simulateTouch:false,//鼠标无效
+			
+			shortSwipes:true,//快速短距离的拖动
+			
+			longSwipesRatio:0.3,//最小拖动距离比例
+			
+			//子元素有变化时自动初始化Swiper
+			observer:true 			
 			
 		})
-		
-	} 
-     window.addEventListener("DOMContentLoaded",loaded,false);
-
-	//用户点击屏幕，但还没有开始滚动
-	
-	
-//	BigImgScroll.on("scrollEnd",function(){
-//			
-//		console.log(BigImgScroll.currentPage);
-//		
-//	})
-
-//	$(".bigImg_wrap").on("touchstart",function(event){
-//		
-//		var ev = event.changedTouches[0];
-//		
-//		console.log(BigImgScroll.currentPage);
-//		
-//		
-//	})
-//	
-//	$(".bigImg_wrap").on("touchmove",function(event){
-//		
-//		var ev = event.changedTouches[0];
-//		
-//		
-//		
-//	})	
-//	
-//	
-//	$(".bigImg_wrap").on("touchend",function(event){
-//		
-//		var ev = event.changedTouches[0];
-//		
-//		console.log(BigImgScroll.currentPage);
-//		
-//		
-//	})
-
-	
-	
-
+			
+	})
+	   
 })()
-
 
 
 

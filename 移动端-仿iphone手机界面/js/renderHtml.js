@@ -20,7 +20,7 @@ var imgStr = "";
 
 for( var i = 0; i < photosData.length; i++){
 	
-	imgStr +="<li><img src='"+ photosData[i] +"' /></li>"
+	imgStr +="<li class = 'swiper-slide'><img src='"+ photosData[i] +"' /></li>"
 	
 }
 

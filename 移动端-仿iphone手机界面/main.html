@@ -8,10 +8,13 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		<link rel ="stylesheet" href="css/swiper-3.4.2.min.css"/>
 		<script src="js/data.js"></script>
 		<script src="js/jquery-3.1.1.js"></script>
 		<script src="js/template-native.js"></script>
 		<script src="js/tools.js"></script>
+		<!--基于jquery的触摸滑动插件-->
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
 		<script>
 			var dpr = 1 / window.devicePixelRatio;
 			document.write('<meta name="viewport" content="width=device-width,user-scalable=no,,initial-scale='+dpr+',minimum-scale='+dpr+',maximum-scale='+dpr+'" />');
@@ -119,8 +122,8 @@
 					</ul>
 					<span class="glyphicon glyphicon-home _home"></span>	
 					
-					<div class="bigImg_open">
-						<ul class="bigImg_wrap">	
+					<div class="bigImg_open swiper-container">
+						<ul class="bigImg_wrap swiper-wrapper">	
 							
 						</ul>
 					</div>
