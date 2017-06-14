@@ -1069,7 +1069,8 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 		//确定点击的索引值
 		index = $(target).index();
 		
-//		console.log(bl);
+		console.log(index);
+		
 		
 		if( bl ){
 			
@@ -1105,7 +1106,11 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 				})				
 				
 			},0);
-						
+			BigImgSwiper.updateSlidesSize();
+//			BigImgSwiper.update();
+			console.log(BigImgSwiper)
+//			console.log(BigImgSwiper.initialSlide)
+			
 			//切换title内容
 			$(".photo_titie .back").show();
 			
@@ -1125,10 +1130,6 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 	$(".photo_titie .sel").on("touchend",function(event){
 		
 		var ev = event.changedTouches[0];
-		//使用destroy方法，销毁 imgScroll，可已释放一下内存
-		imgScroll.destroy();
-		
-		imgScroll = null;
 		
 		if($(this).data("onoff")){
 			
@@ -1161,7 +1162,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 			$(".photo_wrap li").removeClass("active");
 			
 			$(".photo_wrap .photo_mask").hide();
-			
+				    
 		}
 		
 	})
@@ -1229,7 +1230,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 					var objImgs = {photosData:photosData};
 
 					$(".photo_wrap").html(template('photo_pageHTML', objImgs));
-					
+										
 					//渲染大图页面
 					var imgStr = "";
 
@@ -1248,6 +1249,12 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 					selLi_len = 0;
 					
 					$(".photo_titie p span").html(selLi_len);
+					
+					setTimeout(function () {
+			 	
+				        imgScroll.refresh();///刷新
+				        
+				    }, 0);
 					
 				},
 				
@@ -1292,9 +1299,9 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 	//点击大图横向切换
 	$(document).ready(function () {	
 		
-		var BigImgSwiper = new Swiper(".swiper-container",{
+		BigImgSwiper = new Swiper(".swiper-container",{
 			
-			initialSlide:index, //设置初始值
+			initialSlide:index, //设置初始化slide值
 			
 			direction:"horizontal",//默认水平移动,vertical表示垂直方向
 			
@@ -1304,7 +1311,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 			
 			longSwipesRatio:0.3,//最小拖动距离比例
 			
-			//子元素有变化时自动初始化Swiper
+			//子元素有变化时自动初始化Swiper , 但是初始化的值不是index，而是0，此处有坑，待改！！！！！
 			observer:true 			
 			
 		})
