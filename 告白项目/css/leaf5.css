@@ -1,0 +1,133 @@
+#leaf5,{
+	width:800px;
+	margin:100px auto;
+	display: none;	
+}
+.Imgwrap{
+	position: relative;
+	width: 100%;
+}
+#imgList{
+	width:800px;
+	height:360px;
+	-webkit-perspective: 800px;
+}
+#imgList li{
+	width:2px;
+	height:360px;
+	position:relative;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: center center -180px; 
+	/*-webkit-transform: rotateX(-90deg);*/
+	float:left;
+	transition: 1s;
+}
+#imgList a{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	
+}
+#imgList a:nth-of-type(1){
+	background:url(img/img3.jpg) no-repeat;
+	background-size:800px 360px;
+}
+#imgList a:nth-of-type(2){
+	background:url(img/img2.jpg) no-repeat;
+	background-size:800px 360px;
+	top:-360px;
+	-webkit-transform-origin: bottom;
+	-webkit-transform: rotateX(90deg);
+}
+#imgList a:nth-of-type(3){
+	background:url(img/img7.jpg) no-repeat;
+	background-size:800px 360px;
+	-webkit-transform:translateZ(-360px) rotateX(180deg);
+}
+#imgList a:nth-of-type(4){
+	background:url(img/img9.jpg) no-repeat;
+	background-size:800px 360px;
+	top:360px;
+	-webkit-transform-origin: top;
+	-webkit-transform: rotateX(-90deg);
+}
+#imgList span{
+	position: absolute;
+	width:360px;
+	height:360px;
+	background:#333;
+}
+#imgList span:nth-of-type(1){
+	-webkit-transform-origin:left;
+	-webkit-transform:rotateY(90deg);
+	left:0;
+}
+#imgList span:nth-of-type(2){
+	-webkit-transform-origin:right;
+	-webkit-transform:rotateY(-90deg);
+	right:0;
+}
+#btns{
+	float:right;
+	padding:10px 0;
+}
+#btns li{
+	width:70px;
+	height:30px;
+	/*background:#F0E68C;*/
+	color:#fff;
+	border-radius: 50%;
+	font:italic 16px/30px arial;
+	float:left;
+	margin:0 5px;
+	text-align:center;
+	cursor: pointer;
+}
+#btns .active{
+	/*background:cornflowerblue;*/
+	color:cornflowerblue;
+}
+#detail{
+	position: absolute;
+	width:800px;
+	height:360px;
+	left:0;
+	top:0px;
+}
+#detail div{
+	color:#F0E68C;
+	font:bold 20px/28px arial;
+	opacity: 0;
+	transition: 2s;
+}
+#detail div:nth-of-type(1){
+	width:420px;
+	position:absolute;
+	right:20px;
+	top:280px;
+}
+#detail div:nth-of-type(2){
+	width:420px;
+	position:absolute;
+	left:20px;
+	top:20px;
+}
+#detail div:nth-of-type(3){
+	/*width:500px;*/
+	position:absolute;
+	left:20px;
+	top:20px;
+}
+#detail div:nth-of-type(4){
+	width:420px;
+	position:absolute;
+	right:20px;
+	top:260px;
+}
+
+#detail .active{
+	display: block;
+	opacity: 1;
+}

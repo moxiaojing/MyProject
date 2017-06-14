@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style id="css">
+			body{
+				margin:0;
+				background: #000;
+			}
+			ul,ol{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.Imgwrap{
+				position: relative;
+				width:800px;
+				margin:100px auto;
+			}
+			#imgList{
+				width:800px;
+				height:360px;
+				-webkit-perspective: 800px;
+			}
+			#imgList li{
+				width:2px;
+				height:360px;
+				position:relative;
+				-webkit-transform-style: preserve-3d;
+				-webkit-transform-origin: center center -180px; 
+				/*-webkit-transform: rotateX(-90deg);*/
+				float:left;
+				transition: 1s;
+			}
+			#imgList a{
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0;
+				top:0;
+				
+			}
+			#imgList a:nth-of-type(1){
+				background:url(img/img3.jpg) no-repeat;
+				background-size:800px 360px;
+			}
+			#imgList a:nth-of-type(2){
+				background:url(img/img2.jpg) no-repeat;
+				background-size:800px 360px;
+				top:-360px;
+				-webkit-transform-origin: bottom;
+				-webkit-transform: rotateX(90deg);
+			}
+			#imgList a:nth-of-type(3){
+				background:url(img/img7.jpg) no-repeat;
+				background-size:800px 360px;
+				-webkit-transform:translateZ(-360px) rotateX(180deg);
+			}
+			#imgList a:nth-of-type(4){
+				background:url(img/img9.jpg) no-repeat;
+				background-size:800px 360px;
+				top:360px;
+				-webkit-transform-origin: top;
+				-webkit-transform: rotateX(-90deg);
+			}
+			#imgList span{
+				position: absolute;
+				width:360px;
+				height:360px;
+				/*background:#333;*/
+			}
+			#imgList span:nth-of-type(1){
+				-webkit-transform-origin:left;
+				-webkit-transform:rotateY(90deg);
+				left:0;
+			}
+			#imgList span:nth-of-type(2){
+				-webkit-transform-origin:right;
+				-webkit-transform:rotateY(-90deg);
+				right:0;
+			}
+			#btns{
+				float:right;
+				padding:10px 0;
+			}
+			#btns li{
+				width:70px;
+				height:30px;
+				/*background:#F0E68C;*/
+				color:#fff;
+				border-radius: 50%;
+				font:italic 20px/30px blackadder itc,arial;
+				float:left;
+				margin:0 5px;
+				text-align:center;
+				cursor: pointer;
+			}
+			#btns .active{
+				/*background:cornflowerblue;*/
+				
+				color:cornflowerblue;
+			}
+			#detail{
+				position: absolute;
+				width:800px;
+				height:360px;
+				left:0;
+				top:0px;
+			}
+			#detail div{
+				color:#F0E68C;
+				font: bold 18px/30px blackadder itc,arial,"楷体";
+				opacity: 0;
+				transition: 2s;
+			}
+			#detail div:nth-of-type(1){
+				width:420px;
+				position:absolute;
+				right:20px;
+				top:280px;
+			}
+			#detail div:nth-of-type(2){
+				width:420px;
+				position:absolute;
+				left:20px;
+				top:20px;
+			}
+			#detail div:nth-of-type(3){
+				/*width:500px;*/
+				position:absolute;
+				left:20px;
+				top:20px;
+			}
+			#detail div:nth-of-type(4){
+				width:420px;
+				position:absolute;
+				right:20px;
+				top:260px;
+			}
+			
+			#detail .active{
+				display: block;
+				opacity: 1;
+			}
+
+	#logo{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: none;
+		z-index: 9;
+		transform-origin: center;
+		transition: 500ms;
+		transform: scale(.8);
+		opacity: 1;
+	}
+
+
+	#back{
+		width: 100px;
+		height: 110px;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		background: url(../img/nav6.png) no-repeat;
+		background-size: 100% 100%;
+		text-align: center;
+		line-height: 110px;
+		color: #fff;
+		font-weight: bold;
+		font-size: 24px;
+		font-family: arial;
+		transition: 300ms;
+		z-index: 9;	
+	}
+	#back_font{
+		display: inline-block;
+		transition: 300ms;
+		transform: rotate(0deg);
+		font-family: blackadder itc;
+		cursor: pointer;	
+	}				
+			
+		</style>
+	</head>
+	<body>
+		
+		<span id="logo" class="logo_nor">
+			<img src="../img/logo1.png" alt="" usemap="#logo">
+		</span>	 				
+		<div id="back">
+			<i id="back_font">back</i>
+		</div>			
+		
+		<div class="Imgwrap">
+			<ul id="imgList">
+				<li>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<span></span>
+					<span></span>
+				</li>
+			</ul>
+			<ol id="btns">
+				<li class="active">Spring</li>
+				<li>Summer</li>
+				<li>Autumn</li>
+				<li>Winter</li>
+			</ol>
+			<div id="detail">
+				<div>
+					<em>Love is a vine that grows into our hearts.</br>爱是长在我们心里的藤蔓</em>
+				</div>
+				<div>
+					<em>If that person ever appeated ,anyone else would just be a compromise.</br>如果世界上曾经有那个人出现过，其他人都会变成将就。</em>
+				</div>
+				<div>
+					<em>Look into my eyes - you will see what you mean to me.</br>看看我的眼睛，你会发现你对我而言意味着什么</em>
+				</div>
+				<div>
+					<em>No matter the ending is perfect or not,you cannot disappear from my world.</br>我的世界不允许你的消失，不管结局是否完美</em>
+				</div>
+			</div>
+		</div>
+		<script>
+			(function(){
+				var Imgwrap=document.getElementsByClassName('Imgwrap')[0];
+				var imgList=document.getElementById('imgList');
+				var detail=document.getElementById('detail');
+				var imgList_lis=imgList.getElementsByTagName('li');
+				var btns=document.getElementById('btns');
+				var btns_lis=btns.getElementsByTagName('li');
+				var Css=document.getElementById('css');
+				var onoff=true;
+				var detail_divs=detail.children;
+				//生成li
+				var strLi="";
+				var strCss="";
+				var iLiW=2;
+				var iZindex=0;
+				var iLength=imgList.clientWidth/iLiW;
+
+				for(var i=0;i<iLength;i++){
+					
+					i>iLength/2?iZindex--:iZindex++;
+					//生成li
+					strLi+='<li><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a><span></span><span></span></li>';
+					//改变背景图位置
+					strCss+="#imgList li:nth-of-type("+(i+1)+") a{background-position:-"+(i*iLiW)+"px 0}";	
+					//提升li的层级
+					strCss+="#imgList li:nth-of-type("+(i+1)+"){z-index:"+iZindex+"}";
+				}
+				imgList.innerHTML=strLi;
+				Css.innerHTML+=strCss;
+				
+				//初始化
+				setTimeout(function(){
+					detail_divs[0].className="active";
+				},500)
+				
+				//按钮动画
+				
+				for(var i=0;i<btns_lis.length;i++){
+					btns_lis[i].index=i;
+					(function(a){
+						btns_lis[a].onclick=function(){
+							console.log(onoff)
+							if(onoff){//开关为true时，才能执行
+								onoff=false;//点完之后开关变为false；
+								for(var i=0;i<imgList_lis.length;i++){
+									//每一个li过渡时间
+									imgList_lis[i].style.transition="0.5s "+i*5+"ms";
+									//每一个li旋转
+									imgList_lis[i].style.webkitTransform="rotateX(-"+a*90+"deg)";
+								}
+								//当最后一个li旋转完之后，开关变为true；
+								var that = this;
+								setTimeout(function(){
+									onoff=true;
+									detail_divs[that.index].className="active";
+								},(500+ (imgList_lis.length-1)*5))
+								//改变btn的class，清空所有，为当前添加；
+								for(var i=0;i<btns_lis.length;i++){
+									btns_lis[i].className="";
+								}
+								this.className="active";
+								//显示detail
+								for(var j=0;j<detail_divs.length;j++){
+									detail_divs[j].className="";
+								}
+								
+							}
+						}
+					})(i)
+				}
+				//清除点击屏幕的默认样式
+				document.onmousedown=function(){
+					return false;
+				}
+				
+				
+			})()
+			
+		</script>
+		<script type="text/javascript" src="../backHome.js">
+			
+		</script>
+	</body>
+</html>

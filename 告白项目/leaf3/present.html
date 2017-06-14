@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {
+			margin: 0;
+			padding: 0;
+		}
+        #wrap{
+        	width: 800px;
+			height: 600px;
+			margin: 50px auto;
+			position: relative;
+			background:url(./images/bjz.png);
+        }
+		#box {
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			position:relative;
+			background:url(./images/musict.jpg);
+			/*border-radius: 150px;*/
+			display:none;
+		}
+        #box div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				transition: 2s;
+				transform-origin: 0 0;
+				background: url(./images/lwx.jpg) no-repeat;
+		}
+		#heka{
+            width: 600px;
+			height: 400px;
+			margin: 50px auto;
+			position: relative;
+			transform-origin: center;
+			transition: all 1s;
+			display:block;
+		}	
+		#img2:hover{
+			transform: rotateZ(-360deg);/*旋转180度*/
+		}
+		#img2{
+			width: 600px;
+			height: 400px;
+			margin: 50px auto;
+			position: absolute;
+			transform-origin: center;
+			transition: all 1s;
+		}
+		#zhufu{
+			 width: 600px;
+			height: 400px;
+			position: relative;
+			float:right;
+			margin: 150px auto;
+			
+			display:none;
+		}
+		#img3{
+			border:none;
+			vertical-align: top;
+			width: 400px;
+			height: 300px;
+			position: absolute;
+			left: 50%;
+			margin-left: -280px;
+			top: 50%;
+			margin-top: -1000px;
+			border-radius: 250px;
+			transition: 1s
+		}
+        #dianji{
+        	left:40%;
+        	top:83%;
+        	position: absolute;
+        	opacity: 0;
+        	transition: 3s
+        }
+        #img4{
+            width: 100px;
+        	height: 100px;
+        	position: relative;
+        	border-radius: 50px;
+        }
+        
+	#logo{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: none;
+		z-index: 9;
+		transform-origin: center;
+		transition: 500ms;
+		transform: scale(.8);
+		opacity: 1;
+	}		
+	
+	#back{
+		width: 100px;
+		height: 110px;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		background: url(../img/nav6.png) no-repeat;
+		background-size: 100% 100%;
+		text-align: center;
+		line-height: 110px;
+		color: #fff;
+		font-weight: bold;
+		font-size: 24px;
+		font-family: arial;
+		transition: 300ms;
+		z-index: 9;	
+	}
+	#back_font{
+		display: inline-block;
+		transition: 300ms;
+		transform: rotate(0deg);
+		font-family: blackadder itc;
+		cursor: pointer;	
+	}	
+        
+	</style>
+</head>
+<body>
+	
+	<span id="logo" class="logo_nor">
+		<img src="../img/logo1.png" alt="" usemap="#logo">
+	</span>	 				
+	<div id="back">
+		<i id="back_font">back</i>
+	</div>		
+
+	<div id="wrap">
+		<div id="box">
+
+		</div>
+		<div id="heka">
+			<img id="img2" src="images/hkz.jpg"/>
+		</div>
+		<div id="zhufu">
+			<img id="img3" src="images/mc.jpg"/>
+		</div>
+		<div id="dianji">
+			<img id="img4" src="images/an.jpg"/>
+	</div>
+    </div>
+	<script>
+	    var box=document.getElementById("box");
+	    var heka=document.getElementById("heka");
+	    var zhufu=document.getElementById("zhufu");
+	    var img3=document.getElementById("img3");
+	    var img2=document.getElementById("img2");
+	    heka.onclick=function(){
+	      	 setTimeout(function(){
+	           heka.style.display="none";
+	           box.style.display="block"
+		      },1000)
+	    }
+		for(var i = 0;i<9;i++){
+		    box.innerHTML += "<div style='left:"+(100*(i%3))+"px;top:"+Math.floor(i/3)*100+"px;background-position:"+(-100*(i%3))+"px "+(-Math.floor(i/3)*100)+"px'></div>";
+		}
+	    var divs = box.getElementsByTagName("div");
+		for(var i = 0;i<divs.length;i++){
+		    divs[i].onmouseover = function(){
+				this.style.opacity = "0";
+				this.style.transform = "rotate(180deg) scale(0)";
+		    }
+		}
+		box.onclick=function(){
+		    box.style.display="none";
+		    wrap.style.background="url(./images/bjzz.jpg)";
+		    dianji.style.opacity="1";
+		}
+	    var img4=document.getElementById("img4");
+	    img4.onclick=function(){
+		    zhufu.style.display="block";
+		    setTimeout(function(){
+				img3.style.marginTop = "-250px";
+			},1000)
+        }
+	</script>
+	<script src="../backHome.js" type="text/javascript">
+		
+	</script>
+	
+</body>
+</html>

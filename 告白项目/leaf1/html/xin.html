@@ -1,0 +1,396 @@
+<!DOcTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<style type="text/css">
+			@keyframes real{
+				10%{
+					transform:rotateZ(30deg) scale(.5);
+				}
+				20%{
+					transform:rotateZ(-40deg) scale(1);
+				}
+				30%{
+					transform:rotateZ(20deg) scale(.6);
+				}
+				40%{
+					transform:rotateZ(-30deg) scale(.9);
+				}
+				50%{
+					transform:rotateZ(15deg) scale(.7);
+				}
+				60%{
+					transform:rotateZ(-25deg) scale(.8);
+				}
+				70%{
+					transform:rotateZ(10deg) scale(.6);
+				}
+				80%{
+					transform:rotateZ(-20deg) scale(.8);
+				}
+				90%{
+					transform:rotateZ(0deg) scale(.9);
+				}
+				100%{
+					transform:rotateZ(-10deg) scale(1);
+					display:none;
+				}
+			}
+			body{
+				margin:0;
+				background:#afa;
+				height: 1000px;
+		}
+			#con{
+				width:250px;
+				height:260px;
+				perspective:600px;
+				position:absolute;
+				/*border:1px solid #eee;*/
+				/*position:absolute;*/
+				/*transform-style:preserve-3d;
+				transition:1s;*/
+			}
+			#box{
+				width:250px;
+				height:260px;
+				/*border:1px solid #eee;*/
+				position:absolute;
+				/*left:100%;
+				top:50%;
+				margin-left:125px;
+				margin-top:-50px;*/
+				/*background:red;*/
+				/*transform-style:preserve-3d;
+				transition:1s;*/
+				/*transform:rotateY(80deg);*/
+			}
+			.back{
+				position:absolute;
+				width:100%;
+				height:100%;
+				/*background:url(../img/4.jpg) no-repeat;*/
+			}
+			.pic{
+				/*position:absolute;*/
+				width:100%;
+				height:100%;
+
+			}
+			span{
+				/*display:block;*/
+				/*opacity:.8;*/
+				width:400px;
+				height:400px;
+				background:url(../img/89.png);
+				/*-webkit-filter:blur(5px);*/
+				/*position:absolute;*/
+				/*transform-origin:top;*/
+			}
+			/*span:nth-of-type(6){
+				border:none;
+			}*/
+			.fei{
+				width:200px;
+				height:200px;
+				background:url(../img/2.png) no-repeat;
+				position: relative;
+				/*transition:1s;*/
+				transform-origin:center 130px;
+				transform-style:preserve-3d;
+				z-index: 10;
+			}
+			.fei:before{
+				content: '';
+				display:block;
+				width:160px;
+				height:20px;
+				border-radius:50%;
+				/*background:url(../img/2.png) no-repeat;*/
+				background:blue;
+				opacity:.2;
+				position: absolute;
+				box-shadow:10px 10px 10px;
+				-webkit-filter:blur(10px);
+				left:6px;
+				top:60px;
+				z-index:-88;
+			}
+			#heart{
+				position: absolute;
+				width:400px;
+				height:400px;
+				left:300px;
+				top:200px;
+				/*display:none;*/
+				/*transition:4s;*/
+				-webkit-filter:blur(1px);
+			}
+			#heart:hover{
+
+			}
+			#real{
+				display:none;
+				position: absolute;
+				width:400px;
+				height:400px;
+				background:url(../img/89.png) 0px ;
+				background-size:100% 100%;
+				border:none;
+			}
+			.bac{
+				display:none;
+				width:400px;
+				height:400px;
+				background:url(../img/89.png) 0px ;
+				background-size:100% 100%;
+				/*border:none;*/
+				-webkit-filter:blur(4px);
+				transform-origin:center center;
+				position:absolute;
+			}
+			#sml{
+				width:556px;
+				height:470px;
+				position:absolute;
+				left:50%;
+				top:50%;
+				background:url(../img/8.png) 0px ;
+				background-size:100% 100%;
+				margin-left:-248px;
+				margin-top:-235px;
+			}
+			
+			#logo{
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: none;
+				z-index: 9;
+				transform-origin: center;
+				transition: 500ms;
+				transform: scale(.8);
+				opacity: 1;
+			}
+			
+		#back{
+			width: 100px;
+			height: 110px;
+			position: fixed;
+			right: 30px;
+			bottom: 30px;
+			background: url(../../img/nav6.png) no-repeat;
+			background-size: 100% 100%;
+			text-align: center;
+			line-height: 110px;
+			color: #fff;
+			font-weight: bold;
+			font-size: 24px;
+			font-family: arial;
+			transition: 300ms;
+			z-index: 9;	
+		}
+		#back_font{
+			display: inline-block;
+			transition: 300ms;
+			transform: rotate(0deg);
+			font-family: blackadder itc;
+			cursor: pointer;		
+		}			
+			
+		</style>
+	</head>
+	<body>
+		
+		<span id="logo" class="logo_nor">
+			<img src="../../img/logo1.png" alt="" usemap="#logo">
+		</span>	 				
+		<div id="back">
+			<i id="back_font">back</i>
+		</div>		
+		<div class="back"><img class="pic" src="../img/4.jpg"></div>
+		<div id="sml"></div>
+		<div id="con">
+			<div id="box">
+				
+			</div>
+			<div class="fei">
+				<div id="clone"></div>
+			</div>
+			<div id="heart">
+				<span id="real"></span>
+				<span class="bac"></span>
+				<span class="bac"></span>
+				<span class="bac"></span>
+				<span class="bac"></span>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			var spans = document.getElementsByTagName("span");
+			var box = document.getElementById("box");
+			var fei =document.getElementsByClassName("fei")[0];
+			var time=setInterval(move,100);
+			var clone =document.getElementById("clone");
+			var heart =document.getElementById("heart");
+			var bac = document.getElementsByClassName("bac");
+			var real = document.getElementById("real");
+			var u;var shan;
+			fei.onoff =true;
+			// var arr =[];
+			var mLeft = fei.getBoundingClientRect().left; 
+			function move(){
+				var mTop = fei.getBoundingClientRect().top;
+				var mLeft = fei.getBoundingClientRect().left; 
+				if(mTop>130){
+					mTop =130
+				}
+				fei.style.top = Number(mTop)+4 +"px";
+				mLeft = Number(mLeft )+10;
+				fei.style.left = mLeft+"px";
+				if(mLeft >300){
+					fei.style.left = 300+"px";
+					var oL=fei.getBoundingClientRect().left;
+					clearInterval(time);
+					fei.onoff =false;
+				}
+			}
+			var q;
+			var inSi;
+			var color=setInterval(function(){
+				var ol = fei.getBoundingClientRect().left;
+				if(ol>450){
+					// console.log(1);
+					clearInterval(color);
+					 q=setInterval(d1,450);
+					 inSi=setInterval(d2,350);
+				}
+				
+			},1000)
+			function  d1(){
+				// console.log(2);
+				fei.style.transform ="scale(1.2)";
+				fei.style.transition ="2s";
+					}
+			function  d2(){
+				fei.style.transform ="scale(.7)";
+			}
+			var io = true;
+			var arr = [];
+			var up=134;
+			function  old(){
+					 console.log(up);
+						var io = parseInt(up);
+						for(var i=100;i>79;i--){
+							if(i%2){
+							arr.push(i);
+							}else{
+								arr.push(-i);
+							}
+						}
+						var	nu=0;
+						console.log(arr);
+						var lis=setInterval(function(){
+							nu++;
+							if(nu>=20){
+								real.style.animation ="real 5s";
+								real.style.display = "block";
+								var num = 1;
+								var iop = 1;
+								var res =[];
+								var ti=setInterval(function(){
+									num = num-.2;
+									iop = iop+.4;
+									res.push(num);
+									real.style.opacity = num;
+									if(num <.2){
+										clearInterval(ti);
+									}
+									console.log(bac)
+									console.log(iop)
+									console.log()
+									for(var t=bac.length-1;t>=0;t--){
+										bac[t].style.display = "block";
+										// bac[t].style.transform = "scale("+iop-.1*t+")";
+									bac[t].style.transform = "scale("+(iop/2+Number(t*0.2))+")";
+										bac[t].style.opacity = num;
+										bac[t].style["-webkit-filter"]="blur("+(t/2+iop)+"px)"
+									}
+								},1000)
+								clearInterval(lis);
+								fei.removeEventListener("transitionend",old);
+								fei.style.top = "134px";
+								return;
+							}
+							console.log(arr[nu])
+							console.log(arr[nu] + io)
+							fei.style.top= arr[nu] + io+"px";
+							},100)
+
+						}
+			document.onmouseover = function(e){
+				if(!fei.onoff){
+					if(e.target == fei){
+					clearInterval(q);
+					clearInterval(inSi);
+					fei.style.transform =" scaleX(1.4) scaleY(1.4) translateZ(200px) translateX(-60px) translateY(120px) ";
+					fei.style.transition = "2s";
+					var up = getComputedStyle(fei)["top"];
+					fei.addEventListener("transitionend",old)
+						e.cancelBuble = true;
+					}
+//					document.onmouseout = function(e){
+//						fei.style.transform =" scaleX(1) scaleY(1) ";
+//						fei.style.transition = "2s";
+//							}
+						}
+					}
+			function heart(){
+
+			}
+		</script>
+
+		<script type="text/javascript"> 
+			//    返回主页			
+						
+			var back = document.getElementById("back");
+			var backFont = document.getElementById("back_font");
+			var log = document.getElementById("logo");
+			
+			back.onmouseover = function(){
+				this.style.transform = "rotateZ(-20deg)";
+				backFont.style.transform = "rotateZ(20deg)";
+			}
+			
+			back.onmouseout = function(){
+				this.style.transform = "rotateZ(0deg)";
+				backFont.style.transform = "rotateZ(0deg)";
+			}
+			back.onclick = function(){
+				window.location.href = "../../index.html?1";
+			}
+			
+			
+			//心形图片的鼠标移入效果
+			log.onmouseover = function(){
+			//				clearInterval(timer);
+				this.style.transform = "scale(0.9)";
+				
+			}
+			log.onmouseout =function(){
+			//				rota();	
+				this.style.transform = "scale(0.8)";
+			}
+
+		</script>
+		
+		<script src="../../moveStyle.js">
+			
+		</script>
+		
+	</body>
+</html>
